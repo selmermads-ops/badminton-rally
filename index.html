@@ -1,1 +1,748 @@
-placeholder
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Badminton Rally — Badminton gear &amp; training that actually works</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --court: #1E3A5F;
+    --court-deep: #142a45;
+    --line: #F4F2EA;
+    --ink: #14201F;
+    --paper: #FBFAF6;
+    --card: #FFFFFF;
+    --accent: #C7D82E;
+    --accent-ink: #2B3200;
+    --muted: #5C6B6A;
+    --border: #E4E1D4;
+    --font-display: 'Big Shoulders Display', sans-serif;
+    --font-body: 'Source Sans 3', sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --court: #4A7AB5;
+      --court-deep: #2c4f78;
+      --ink: #EDEBE3;
+      --paper: #12181A;
+      --card: #1A2224;
+      --accent: #C7D82E;
+      --accent-ink: #1B2000;
+      --muted: #9AA6A4;
+      --border: #2A3335;
+    }
+  }
+  :root[data-theme="dark"] {
+    --court: #4A7AB5;
+    --court-deep: #2c4f78;
+    --ink: #EDEBE3;
+    --paper: #12181A;
+    --card: #1A2224;
+    --accent: #C7D82E;
+    --accent-ink: #1B2000;
+    --muted: #9AA6A4;
+    --border: #2A3335;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    line-height: 1.55;
+  }
+  a { color: inherit; }
+  img { max-width: 100%; display: block; }
+
+  .wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ---- Header ---- */
+  header {
+    border-bottom: 1px solid var(--border);
+    background: var(--paper);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  .logo {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: 0.2px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--ink);
+  }
+  .logo-mark { flex-shrink: 0; }
+  .logo-text { display: flex; flex-direction: column; line-height: 1.05; }
+  .logo-word { color: var(--court); }
+  .logo-word em { color: #4B7A46; font-style: normal; }
+  .logo-tag {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 9.5px;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+  @media (max-width: 640px) {
+    .logo-tag { display: none; }
+  }
+  .logo span.dot { color: var(--accent-ink); background: var(--accent); border-radius: 50%; width: 8px; height: 8px; display: inline-block; margin-left: 6px; }
+  nav { display: flex; gap: 28px; }
+  nav a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--muted);
+  }
+  nav a:hover { color: var(--ink); }
+  @media (max-width: 640px) {
+    nav { display: none; }
+  }
+
+  /* ---- Hero ---- */
+  .hero {
+    background: var(--court);
+    color: #F5F6EF;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 76px 24px 88px;
+    position: relative;
+  }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(40px, 7vw, 78px);
+    line-height: 0.98;
+    margin: 0 0 22px;
+    max-width: 15ch;
+  }
+  .hero p {
+    font-size: 19px;
+    max-width: 46ch;
+    color: #DCE4D6;
+    margin: 0 0 32px;
+  }
+  .court-lines {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.18;
+  }
+  .court-lines svg { width: 100%; height: 100%; }
+
+  .btn {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 15px;
+    padding: 13px 26px;
+    border-radius: 3px;
+    text-decoration: none;
+    border: 2px solid transparent;
+  }
+  .btn-accent {
+    background: var(--accent);
+    color: var(--accent-ink);
+  }
+  .btn-outline {
+    border-color: rgba(255,255,255,0.5);
+    color: #F5F6EF;
+    margin-left: 12px;
+  }
+  @media (max-width: 480px) {
+    .btn-outline { margin-left: 0; margin-top: 10px; }
+  }
+
+  /* ---- Section headings ---- */
+  .section { padding: 64px 0; }
+  .section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 32px;
+    gap: 16px;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 14px;
+  }
+  .section-head h2 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 32px;
+    margin: 0;
+  }
+  .section-head .note { color: var(--muted); font-size: 14px; max-width: 32ch; text-align: right; }
+  @media (max-width: 640px) {
+    .section-head { flex-direction: column; align-items: flex-start; }
+    .section-head .note { text-align: left; }
+  }
+
+  /* ---- Article grid ---- */
+  .finder-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+  }
+  .search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    padding: 11px 16px;
+    flex: 1;
+    min-width: 220px;
+    max-width: 380px;
+    color: var(--muted);
+  }
+  .search-box input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--ink);
+    width: 100%;
+  }
+  .filter-chips { display: flex; gap: 8px; flex-wrap: wrap; }
+  .chip {
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--muted);
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 14px;
+    cursor: pointer;
+  }
+  .chip.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .no-results { color: var(--muted); padding: 20px 0; font-size: 15px; }
+  .related { margin-top: 48px; }
+  .related-heading {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 24px;
+    margin: 0 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--ink);
+  }
+  .article-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  @media (max-width: 900px) {
+    .article-grid { grid-template-columns: 1fr; }
+  }
+  .article {
+    background: var(--card);
+    border: 1px solid var(--border);
+  }
+  .article-tag {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--court);
+    padding: 14px 18px 0;
+  }
+  .article h3 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 24px;
+    margin: 6px 0 10px;
+    padding: 0 18px;
+    line-height: 1.05;
+  }
+  .article p {
+    padding: 0 18px;
+    color: var(--muted);
+    font-size: 15px;
+    margin: 0 0 16px;
+  }
+  .article .read {
+    display: block;
+    padding: 14px 18px;
+    border-top: 1px solid var(--border);
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--ink);
+  }
+
+  /* ---- Long-form article body (demo article) ---- */
+  .post {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 40px;
+    margin-top: 8px;
+  }
+  @media (max-width: 640px) { .post { padding: 24px 20px; } }
+  .post h2.title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(28px, 5vw, 42px);
+    margin: 0 0 8px;
+    line-height: 1.02;
+  }
+  .post .meta { color: var(--muted); font-size: 14px; margin-bottom: 28px; }
+  .post h3 { font-family: var(--font-display); font-weight: 700; font-size: 22px; margin: 32px 0 12px; }
+  .post p { max-width: 68ch; margin: 0 0 18px; }
+  .post ul { max-width: 68ch; }
+
+  .pick-box {
+    border: 1px solid var(--border);
+    background: var(--paper);
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+  }
+  .pick-box .info strong { display: block; font-size: 16px; }
+  .pick-box .info span { color: var(--muted); font-size: 14px; }
+  .pick-box a.buy {
+    background: var(--ink);
+    color: var(--paper);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 10px 18px;
+    white-space: nowrap;
+  }
+  .video-box { border-color: var(--court); }
+  .video-box a.buy { background: var(--court); }
+
+  /* ---- Digital product callout ---- */
+  .product-callout {
+    background: var(--court);
+    color: #F5F6EF;
+    padding: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .product-callout h3 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 28px;
+    margin: 0 0 8px;
+  }
+  .product-callout p { margin: 0; max-width: 46ch; color: #DCE4D6; }
+
+  /* ---- Newsletter ---- */
+  .newsletter {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 48px;
+    text-align: center;
+  }
+  .newsletter h3 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 28px;
+    margin: 0 0 10px;
+  }
+  .newsletter p { color: var(--muted); margin: 0 0 24px; }
+  .signup-form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    max-width: 420px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  .signup-form input {
+    flex: 1;
+    min-width: 200px;
+    padding: 13px 16px;
+    border: 1px solid var(--border);
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 15px;
+  }
+  .signup-form button {
+    background: var(--accent);
+    color: var(--accent-ink);
+    border: none;
+    font-weight: 700;
+    padding: 13px 22px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .form-note { font-size: 12px; color: var(--muted); margin-top: 12px; }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 0 48px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .disclosure {
+    background: var(--card);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--muted);
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  [data-view] { display: none; }
+  [data-view].active { display: block; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo" onclick="showView('home');return false;">
+      <svg class="logo-mark" viewBox="0 0 60 60" width="36" height="36" aria-hidden="true">
+        <g transform="rotate(-30 30 30)">
+          <path d="M30 12 L16 44 L21 45 L30 18 Z" fill="#C7CCC4" stroke="var(--court)" stroke-width="1"/>
+          <path d="M30 12 L23 46 L28 46.5 L30 18 Z" fill="#DCE0D9" stroke="var(--court)" stroke-width="1"/>
+          <path d="M30 12 L32 46.5 L37 46 L30 18 Z" fill="#DCE0D9" stroke="var(--court)" stroke-width="1"/>
+          <path d="M30 12 L44 44 L39 45 L30 18 Z" fill="#C7CCC4" stroke="var(--court)" stroke-width="1"/>
+          <path d="M14 47 L20 45.5" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M10 51 L18 48.5" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" opacity="0.6"/>
+          <ellipse cx="30" cy="15" rx="10" ry="7.5" fill="var(--court)"/>
+          <rect x="20.5" y="12.5" width="19" height="2.6" rx="1" fill="var(--paper)" opacity="0.85"/>
+        </g>
+      </svg>
+      <span class="logo-text">
+        <span class="logo-word">Badminton<em>Rally</em></span>
+        <span class="logo-tag">News · Guides · Insights</span>
+      </span>
+    </a>
+    <nav>
+      <a href="#" onclick="showView('home');return false;">Guides</a>
+      <a href="#" onclick="openArticle('racket-guide');return false;">Rackets</a>
+      <a href="#" onclick="showView('home');document.getElementById('newsletter-anchor').scrollIntoView({behavior:'smooth'});return false;">Newsletter</a>
+    </nav>
+  </div>
+</header>
+
+<div class="disclosure">This page contains affiliate links — placeholder links in this prototype don't earn commission yet.</div>
+
+<!-- ============ HOME VIEW ============ -->
+<div data-view="home" class="active">
+
+  <div class="hero">
+    <div class="court-lines">
+      <svg viewBox="0 0 1080 400" preserveAspectRatio="none">
+        <rect x="40" y="30" width="1000" height="340" fill="none" stroke="#F5F6EF" stroke-width="2"/>
+        <line x1="40" y1="200" x2="1040" y2="200" stroke="#F5F6EF" stroke-width="2"/>
+        <line x1="540" y1="30" x2="540" y2="370" stroke="#F5F6EF" stroke-width="1.5" stroke-dasharray="6 6"/>
+      </svg>
+    </div>
+    <div class="hero-inner">
+      <h1>Buy the right racket the first time.</h1>
+      <p>Straight-talking gear guides and training plans for club and league players — no sponsorships pretending to be reviews.</p>
+      <a href="#" class="btn btn-accent" onclick="openArticle('racket-guide');return false;">Read the racket guide</a>
+      <a href="#" class="btn btn-outline" onclick="document.getElementById('newsletter-anchor').scrollIntoView({behavior:'smooth'});return false;">Get the weekly drill</a>
+    </div>
+  </div>
+
+  <div class="wrap section">
+    <div class="section-head">
+      <h2>Find a guide</h2>
+      <div class="note" id="results-note">Search or filter by topic.</div>
+    </div>
+
+    <div class="finder-bar">
+      <div class="search-box">
+        <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><circle cx="8.5" cy="8.5" r="6" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="13" y1="13" x2="18" y2="18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <input type="text" id="article-search" placeholder="Search guides — e.g. racket, shoes, tension" oninput="renderGrid()">
+      </div>
+      <div class="filter-chips" id="filter-chips"></div>
+    </div>
+
+    <div class="article-grid" id="article-grid"></div>
+  </div>
+
+  <div class="wrap" style="padding-bottom: 64px;">
+    <div class="product-callout">
+      <div>
+        <h3>Want a full season plan, not just drills?</h3>
+        <p>Shuttle Life's training programs go deeper than a blog post can — built by a head coach for club players who want structure.</p>
+      </div>
+      <a href="#" class="btn btn-accent" onclick="return confirm('Placeholder — link this to your Shuttle Life Gumroad membership page.')">See Shuttle Life →</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom: 80px;" id="newsletter-anchor">
+    <div class="newsletter">
+      <h3>One drill, one gear tip, every Sunday</h3>
+      <p>Short email. No fluff. Unsubscribe whenever.</p>
+      <form class="signup-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Added — check your inbox';">
+        <input type="email" placeholder="you@email.com" required>
+        <button type="submit">Sign up</button>
+      </form>
+      <div class="form-note">Prototype form — connect to your email provider (e.g. ConvertKit, Mailchimp) before launch.</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ============ POST VIEW (demo evergreen article) ============ -->
+<div data-view="post">
+  <div class="wrap section">
+    <a href="#" onclick="showView('home');return false;" style="font-weight:700; font-size:14px; text-decoration:none; color: var(--court);">← Back to guides</a>
+
+    <div class="post">
+      <h2 class="title" id="post-title"></h2>
+      <div class="meta" id="post-meta"></div>
+      <div id="post-body"></div>
+    </div>
+
+    <div class="related">
+      <h3 class="related-heading">Related guides</h3>
+      <div class="article-grid" id="related-grid"></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>Badminton Rally — gear guides for club players.</div>
+    <div>badmintonrally.com</div>
+  </div>
+</footer>
+
+<script>
+function showView(name) {
+  document.querySelectorAll('[data-view]').forEach(function(el){
+    el.classList.toggle('active', el.getAttribute('data-view') === name);
+  });
+  window.scrollTo({top: 0, behavior: 'instant'});
+  if (name === 'home') {
+    history.replaceState(null, '', location.pathname + location.search);
+    document.title = 'Badminton Rally — Badminton gear & training that actually works';
+  }
+}
+
+var articles = [
+  {
+    id: 'racket-guide',
+    tag: 'GEAR',
+    title: 'How to choose a badminton racket without getting oversold',
+    excerpt: "Balance point, flex, and weight — what actually changes your game versus what's marketing.",
+    readTime: '8 min read',
+    updated: 'September 2026',
+    body: `
+      <p>Most racket buying advice online is written by whoever sells the racket. Here's the short version, stripped of marketing language, aimed at club and league players rather than professionals sponsored to say a frame is "explosive."</p>
+      <h3>The three numbers that actually matter</h3>
+      <p><strong>Weight (grams):</strong> Most adult rackets sit between 80–90g unstrung, marked 3U to 4U. Lighter rackets (4U) are easier on the shoulder and quicker for doubles at the net. Heavier (3U) rackets hold up better in a hitting duel but tire you out faster if your conditioning isn't there yet.</p>
+      <p><strong>Balance point:</strong> This tells you where the weight sits, not just how much there is. Head-heavy rackets hit harder but are slower to reset; head-light and even-balance rackets are faster for defense and fast exchanges. Most improving club players are better served by even-balance than the head-heavy racket their doubles partner swears by.</p>
+      <p><strong>Shaft flex:</strong> Flexible shafts help you generate power with a shorter, faster swing — useful if your technique is still developing. Stiff shafts reward players who already generate their own power and want more control and less energy loss.</p>
+      <h3>A sensible starting pick</h3>
+      <div class="pick-box">
+        <div class="info">
+          <strong>Even-balance, 4U, medium flex frame</strong>
+          <span>Good default for club players rebuilding technique or coming back after a break</span>
+        </div>
+        <a href="#" class="buy" onclick="return confirm('Placeholder — replace with your approved affiliate link once accepted into Involve Asia.')">Check price →</a>
+      </div>
+      <h3>What to ignore</h3>
+      <ul>
+        <li>Pro player endorsements — their swing speed and training load aren't yours.</li>
+        <li>"Explosive power" framing — that's shaft flex and your technique, not a marketing word.</li>
+        <li>Buying two grades stiffer than you need "to grow into" — you'll grow into worse habits compensating for it instead.</li>
+      </ul>
+      <h3>Next step</h3>
+      <p>Once the racket fits, string tension is the next lever — and the one most players get backwards. That's the next guide in this series.</p>
+    `
+  },
+  {
+    id: 'grip-tape',
+    tag: 'GEAR',
+    title: 'Grip Tape: When and How to Change It',
+    excerpt: 'The small, overlooked detail that affects your shot control more than most equipment upgrades.',
+    readTime: '5 min read',
+    updated: 'September 2026',
+    body: `
+      <p>Grip tape is the cheapest, most frequently ignored piece of badminton equipment — and one of the few things that directly affects every single shot you hit.</p>
+      <h3>Signs it's time to change</h3>
+      <p>A shiny, smooth patch where your thumb and fingers sit means the tape has lost its texture — this is the most reliable sign, more than how old it looks. If your grip feels slick even with dry hands, or you're wrapping a fresh overgrip around a base that's already worn out, it's time.</p>
+      <h3>Overgrip vs. replacement grip — what's the difference</h3>
+      <p>A <strong>replacement grip</strong> is the base layer directly on the handle — thicker, more cushioned, meant to last months. An <strong>overgrip</strong> is a thin layer wrapped on top — cheap, tacky, and meant to be swapped every few weeks for players who sweat heavily.</p>
+      <p>Most club players only need to replace the base grip once or twice a year, but should be swapping an overgrip every 3-6 weeks of regular play.</p>
+      <div class="pick-box video-box">
+        <div class="info">
+          <strong>Watch: How to put on a badminton grip</strong>
+          <span>Step-by-step guide — removing the old grip, prepping the racket, wrapping a new one</span>
+        </div>
+        <a href="https://www.youtube.com/watch?v=680urXHmmcA" class="buy" target="_blank" rel="noopener">Watch video →</a>
+      </div>
+      <div class="pick-box">
+        <div class="info">
+          <strong>Pack of tacky overgrips</strong>
+          <span>Budget multi-pack, good for players who sweat heavily</span>
+        </div>
+        <a href="#" class="buy" onclick="return confirm('Placeholder — replace with your approved affiliate link once accepted into Involve Asia.')">Check price →</a>
+      </div>
+      <h3>How to tell your grip size is actually wrong</h3>
+      <p>If you're re-wrapping constantly because the grip feels too thin no matter what, you may need a larger base grip size, not just fresh tape.</p>
+    `
+  },
+  {
+    id: 'home-exercises',
+    tag: 'TRAINING',
+    title: '5 Exercises You Can Do at Home Without a Racket',
+    excerpt: 'Build conditioning and explosiveness between court sessions — no equipment, no court access needed.',
+    readTime: '5 min read',
+    updated: 'September 2026',
+    body: `
+      <p>Court time is limited for most club players, but conditioning between sessions is where real improvement happens. These five need no equipment and roughly 15 minutes.</p>
+      <h3>1. Shadow footwork (3 sets of 1 minute)</h3>
+      <p>Mimic the six corners of the court — front, back, and side lunges — without a shuttle. Focus on split-step timing, not speed.</p>
+      <h3>2. Lateral bounds</h3>
+      <p>Jump side to side, landing softly on one leg each time. Builds the explosive lateral push badminton constantly demands.</p>
+      <h3>3. Split-step reaction drill</h3>
+      <p>Have someone call "left," "right," "front," or "back" randomly while you split-step and react. No partner? Use a phone timer with random intervals as your cue.</p>
+      <h3>4. Wall shadow swings</h3>
+      <p>Practice your smash and clear swing motion facing a wall, focusing on full shoulder rotation rather than arm-only movement — a common beginner habit that limits power.</p>
+      <h3>5. Single-leg balance holds</h3>
+      <p>30 seconds per leg, eyes closed if you can manage it. Badminton constantly puts you on one leg mid-lunge; ankle stability here directly reduces injury risk.</p>
+      <div class="pick-box video-box">
+        <div class="info">
+          <strong>Watch: home training routine</strong>
+          <span>Follow-along footwork and conditioning you can do without a court</span>
+        </div>
+        <a href="https://www.youtube.com/watch?v=tkwT4a2uDoc" class="buy" target="_blank" rel="noopener">Watch video →</a>
+      </div>
+      <h3>How to use this</h3>
+      <p>Two or three sessions a week, 15 minutes each, is enough to notice a difference in your court movement within a month — without needing any court access at all.</p>
+    `
+  }
+];
+
+function uniqueTags() {
+  var tags = articles.map(function(a){ return a.tag; });
+  return tags.filter(function(t, i){ return tags.indexOf(t) === i; });
+}
+
+var activeTag = 'ALL';
+
+function renderChips() {
+  var wrap = document.getElementById('filter-chips');
+  var tags = ['ALL'].concat(uniqueTags());
+  wrap.innerHTML = tags.map(function(t){
+    return '<button type="button" class="chip' + (t === activeTag ? ' active' : '') + '" onclick="setFilter(\'' + t + '\')">' + (t === 'ALL' ? 'All guides' : t) + '</button>';
+  }).join('');
+}
+
+function setFilter(tag) {
+  activeTag = tag;
+  renderChips();
+  renderGrid();
+}
+
+function renderGrid() {
+  var term = document.getElementById('article-search').value.trim().toLowerCase();
+  var filtered = articles.filter(function(a){
+    var matchesTag = activeTag === 'ALL' || a.tag === activeTag;
+    var matchesTerm = !term || (a.title + ' ' + a.excerpt + ' ' + a.tag).toLowerCase().indexOf(term) !== -1;
+    return matchesTag && matchesTerm;
+  });
+
+  var grid = document.getElementById('article-grid');
+  var note = document.getElementById('results-note');
+  note.textContent = filtered.length + (filtered.length === 1 ? ' guide found' : ' guides found');
+
+  if (filtered.length === 0) {
+    grid.innerHTML = '<div class="no-results">No guides match that search yet. New guides are added regularly — try a different word or browse all guides.</div>';
+    return;
+  }
+
+  grid.innerHTML = filtered.map(function(a){
+    return '<div class="article">' +
+      '<div class="article-tag">' + a.tag + '</div>' +
+      '<h3>' + a.title + '</h3>' +
+      '<p>' + a.excerpt + '</p>' +
+      '<a href="#" class="read" onclick="openArticle(\'' + a.id + '\');return false;">Read the guide →</a>' +
+    '</div>';
+  }).join('');
+}
+
+function openArticle(id) {
+  var a = articles.find(function(x){ return x.id === id; });
+  if (!a) return;
+  document.getElementById('post-title').textContent = a.title;
+  document.getElementById('post-meta').textContent = a.tag.charAt(0) + a.tag.slice(1).toLowerCase() + ' guide · ' + a.readTime + ' · Last updated ' + a.updated;
+  document.getElementById('post-body').innerHTML = a.body;
+  renderRelated(a);
+  showView('post');
+  history.replaceState(null, '', '#' + id);
+  document.title = a.title + ' — Badminton Rally';
+}
+
+function renderRelated(current) {
+  var sameTag = articles.filter(function(x){ return x.id !== current.id && x.tag === current.tag; });
+  var others = articles.filter(function(x){ return x.id !== current.id && x.tag !== current.tag; });
+  var picks = sameTag.concat(others).slice(0, 3);
+
+  var grid = document.getElementById('related-grid');
+  var section = document.querySelector('.related');
+
+  if (picks.length === 0) {
+    section.style.display = 'none';
+    return;
+  }
+  section.style.display = 'block';
+
+  grid.innerHTML = picks.map(function(a){
+    return '<div class="article">' +
+      '<div class="article-tag">' + a.tag + '</div>' +
+      '<h3>' + a.title + '</h3>' +
+      '<p>' + a.excerpt + '</p>' +
+      '<a href="#" class="read" onclick="openArticle(\'' + a.id + '\');return false;">Read the guide →</a>' +
+    '</div>';
+  }).join('');
+}
+
+renderChips();
+renderGrid();
+
+if (location.hash && articles.find(function(x){ return x.id === location.hash.slice(1); })) {
+  openArticle(location.hash.slice(1));
+}
+</script>
+
+</body>
+</html>
