@@ -4,6 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Badminton Rally — Badminton gear &amp; training that actually works</title>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Badminton Rally">
+<meta property="og:title" content="Badminton Rally — Badminton gear & training that actually works">
+<meta property="og:description" content="Straight-talking gear guides and training plans for club and league players — no sponsorships pretending to be reviews.">
+<meta property="og:url" content="https://badmintonrally.com">
+<meta name="description" content="Straight-talking badminton gear reviews and training guides for club and league players. Rackets, shoes, bags, and grip advice — no sponsored fluff.">
+<link rel="canonical" href="https://badmintonrally.com/">
+
+<!-- Google Analytics (GA4) — replace G-SBC8GQSEW0 with your real Measurement ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SBC8GQSEW0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SBC8GQSEW0');
+</script>
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Badminton Rally">
+<meta name="twitter:description" content="Straight-talking gear guides and training plans for club and league players.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -50,10 +69,29 @@
   html { -webkit-text-size-adjust: 100%; }
   body {
     margin: 0;
-    background: var(--paper);
+    background-color: var(--paper);
+    background-image:
+      radial-gradient(circle at 100% 0%, rgba(30,58,95,0.035) 0%, transparent 45%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cg transform='translate(90,40) rotate(-28)' fill='none' stroke='%231E3A5F' stroke-width='1.4' opacity='0.05'%3E%3Cpath d='M0 0 L-16 34 L-11 35 L0 8 Z'/%3E%3Cpath d='M0 0 L-6 36 L-1 36.5 L0 8 Z'/%3E%3Cpath d='M0 0 L6 36 L11 36.5 L0 8 Z'/%3E%3Cpath d='M0 0 L16 34 L11 35 L0 8 Z'/%3E%3Cellipse cx='0' cy='2' rx='9' ry='6.5'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: repeat, repeat;
+    background-size: auto, 180px 180px;
+    background-attachment: fixed, fixed;
     color: var(--ink);
     font-family: var(--font-body);
     line-height: 1.55;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) body {
+      background-image:
+        radial-gradient(circle at 100% 0%, rgba(74,122,181,0.06) 0%, transparent 45%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cg transform='translate(90,40) rotate(-28)' fill='none' stroke='%234A7AB5' stroke-width='1.4' opacity='0.08'%3E%3Cpath d='M0 0 L-16 34 L-11 35 L0 8 Z'/%3E%3Cpath d='M0 0 L-6 36 L-1 36.5 L0 8 Z'/%3E%3Cpath d='M0 0 L6 36 L11 36.5 L0 8 Z'/%3E%3Cpath d='M0 0 L16 34 L11 35 L0 8 Z'/%3E%3Cellipse cx='0' cy='2' rx='9' ry='6.5'/%3E%3C/g%3E%3C/svg%3E");
+    }
+  }
+  :root[data-theme="dark"] body {
+    background-image:
+      radial-gradient(circle at 100% 0%, rgba(74,122,181,0.06) 0%, transparent 45%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cg transform='translate(90,40) rotate(-28)' fill='none' stroke='%234A7AB5' stroke-width='1.4' opacity='0.08'%3E%3Cpath d='M0 0 L-16 34 L-11 35 L0 8 Z'/%3E%3Cpath d='M0 0 L-6 36 L-1 36.5 L0 8 Z'/%3E%3Cpath d='M0 0 L6 36 L11 36.5 L0 8 Z'/%3E%3Cpath d='M0 0 L16 34 L11 35 L0 8 Z'/%3E%3Cellipse cx='0' cy='2' rx='9' ry='6.5'/%3E%3C/g%3E%3C/svg%3E");
+    }
   }
   a { color: inherit; }
   img { max-width: 100%; display: block; }
@@ -65,12 +103,15 @@
   }
 
   /* ---- Header ---- */
+  .site-top {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: var(--paper);
+  }
   header {
     border-bottom: 1px solid var(--border);
     background: var(--paper);
-    position: sticky;
-    top: 0;
-    z-index: 10;
   }
   .header-inner {
     display: flex;
@@ -119,6 +160,22 @@
     nav { display: none; }
   }
 
+  .topbar-finder {
+    border-bottom: 1px solid var(--border);
+    background: var(--paper);
+    padding: 14px 0;
+  }
+  .topbar-finder-inner {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .topbar-finder .search-box { max-width: 320px; }
+  @media (max-width: 720px) {
+    .topbar-finder .search-box { max-width: none; min-width: 100%; }
+  }
+
   /* ---- Hero ---- */
   .hero {
     background: var(--court);
@@ -159,15 +216,19 @@
     font-family: var(--font-body);
     font-weight: 700;
     font-size: 15px;
-    padding: 13px 26px;
-    border-radius: 3px;
+    padding: 13px 28px;
+    border-radius: 999px;
     text-decoration: none;
     border: 2px solid transparent;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
   }
+  .btn:hover { transform: translateY(-2px); }
   .btn-accent {
     background: var(--accent);
     color: var(--accent-ink);
+    box-shadow: 0 6px 16px rgba(199,216,46,0.35);
   }
+  .btn-accent:hover { box-shadow: 0 10px 22px rgba(199,216,46,0.45); }
   .btn-outline {
     border-color: rgba(255,255,255,0.5);
     color: #F5F6EF;
@@ -215,12 +276,16 @@
     gap: 10px;
     border: 1px solid var(--border);
     background: var(--card);
-    padding: 11px 16px;
+    padding: 12px 18px;
     flex: 1;
     min-width: 220px;
     max-width: 380px;
     color: var(--muted);
+    border-radius: 999px;
+    box-shadow: 0 2px 8px rgba(20,32,31,0.05);
+    transition: box-shadow 0.15s ease, border-color 0.15s ease;
   }
+  .search-box:focus-within { border-color: var(--court); box-shadow: 0 4px 14px rgba(20,32,31,0.1); }
   .search-box input {
     border: none;
     background: transparent;
@@ -238,9 +303,12 @@
     font-family: var(--font-body);
     font-size: 13px;
     font-weight: 600;
-    padding: 8px 14px;
+    padding: 9px 16px;
     cursor: pointer;
+    border-radius: 999px;
+    transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
   }
+  .chip:hover { transform: translateY(-1px); box-shadow: 0 3px 10px rgba(20,32,31,0.08); }
   .chip.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
   .no-results { color: var(--muted); padding: 20px 0; font-size: 15px; }
   .related { margin-top: 48px; }
@@ -263,30 +331,35 @@
   .article {
     background: var(--card);
     border: 1px solid var(--border);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(20,32,31,0.05);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
   }
+  .article:hover { transform: translateY(-3px); box-shadow: 0 12px 24px rgba(20,32,31,0.1); }
   .article-tag {
     font-size: 12px;
     font-weight: 700;
     color: var(--court);
-    padding: 14px 18px 0;
+    padding: 18px 20px 0;
   }
   .article h3 {
     font-family: var(--font-display);
     font-weight: 700;
     font-size: 24px;
     margin: 6px 0 10px;
-    padding: 0 18px;
+    padding: 0 20px;
     line-height: 1.05;
   }
   .article p {
-    padding: 0 18px;
+    padding: 0 20px;
     color: var(--muted);
     font-size: 15px;
     margin: 0 0 16px;
   }
   .article .read {
     display: block;
-    padding: 14px 18px;
+    padding: 14px 20px;
     border-top: 1px solid var(--border);
     font-weight: 700;
     font-size: 14px;
@@ -298,8 +371,10 @@
   .post {
     background: var(--card);
     border: 1px solid var(--border);
+    border-radius: 20px;
     padding: 40px;
     margin-top: 8px;
+    box-shadow: 0 4px 18px rgba(20,32,31,0.06);
   }
   @media (max-width: 640px) { .post { padding: 24px 20px; } }
   .post h2.title {
@@ -314,16 +389,36 @@
   .post p { max-width: 68ch; margin: 0 0 18px; }
   .post ul { max-width: 68ch; }
 
+  .share-fb {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 24px;
+    padding: 12px 24px;
+    background: #1877F2;
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 0 4px 14px rgba(24,119,242,0.3);
+  }
+  .share-fb:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(24,119,242,0.4); }
+
   .pick-box {
     border: 1px solid var(--border);
     background: var(--paper);
-    padding: 18px 20px;
+    padding: 20px 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 16px;
     margin: 20px 0;
     flex-wrap: wrap;
+    border-radius: 16px;
   }
   .pick-box .info strong { display: block; font-size: 16px; }
   .pick-box .info span { color: var(--muted); font-size: 14px; }
@@ -333,9 +428,12 @@
     text-decoration: none;
     font-weight: 700;
     font-size: 14px;
-    padding: 10px 18px;
+    padding: 11px 22px;
     white-space: nowrap;
+    border-radius: 999px;
+    transition: transform 0.15s ease;
   }
+  .pick-box a.buy:hover { transform: translateY(-2px); }
   .video-box { border-color: var(--court); }
   .video-box a.buy { background: var(--court); }
 
@@ -349,6 +447,7 @@
     align-items: center;
     gap: 24px;
     flex-wrap: wrap;
+    border-radius: 22px;
   }
   .product-callout h3 {
     font-family: var(--font-display);
@@ -364,6 +463,8 @@
     border: 1px solid var(--border);
     padding: 48px;
     text-align: center;
+    border-radius: 22px;
+    box-shadow: 0 4px 18px rgba(20,32,31,0.05);
   }
   .newsletter h3 {
     font-family: var(--font-display);
@@ -383,22 +484,26 @@
   .signup-form input {
     flex: 1;
     min-width: 200px;
-    padding: 13px 16px;
+    padding: 13px 18px;
     border: 1px solid var(--border);
     background: var(--paper);
     color: var(--ink);
     font-family: var(--font-body);
     font-size: 15px;
+    border-radius: 999px;
   }
   .signup-form button {
     background: var(--accent);
     color: var(--accent-ink);
     border: none;
     font-weight: 700;
-    padding: 13px 22px;
+    padding: 13px 26px;
     font-size: 15px;
     cursor: pointer;
+    border-radius: 999px;
+    transition: transform 0.15s ease;
   }
+  .signup-form button:hover { transform: translateY(-2px); }
   .form-note { font-size: 12px; color: var(--muted); margin-top: 12px; }
 
   footer {
@@ -429,6 +534,7 @@
 </head>
 <body>
 
+<div class="site-top">
 <header>
   <div class="header-inner">
     <a href="#" class="logo" onclick="showView('home');return false;">
@@ -452,12 +558,22 @@
     <nav>
       <a href="#" onclick="showView('home');return false;">Guides</a>
       <a href="#" onclick="openArticle('racket-guide');return false;">Rackets</a>
-      <a href="#" onclick="showView('home');document.getElementById('newsletter-anchor').scrollIntoView({behavior:'smooth'});return false;">Newsletter</a>
     </nav>
   </div>
 </header>
 
-<div class="disclosure">This page contains affiliate links — placeholder links in this prototype don't earn commission yet.</div>
+<div class="topbar-finder">
+  <div class="wrap topbar-finder-inner">
+    <div class="search-box">
+      <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><circle cx="8.5" cy="8.5" r="6" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="13" y1="13" x2="18" y2="18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <input type="text" id="article-search" placeholder="Search guides — e.g. racket, shoes, tension" oninput="renderGrid(); if(!document.querySelector('[data-view=home]').classList.contains('active')){ showView('home'); }">
+    </div>
+    <div class="filter-chips" id="filter-chips"></div>
+  </div>
+</div>
+</div>
+
+<div class="disclosure">This site contains affiliate links. We may earn a commission on qualifying purchases, at no extra cost to you.</div>
 
 <!-- ============ HOME VIEW ============ -->
 <div data-view="home" class="active">
@@ -474,7 +590,6 @@
       <h1>Buy the right racket the first time.</h1>
       <p>Straight-talking gear guides and training plans for club and league players — no sponsorships pretending to be reviews.</p>
       <a href="#" class="btn btn-accent" onclick="openArticle('racket-guide');return false;">Read the racket guide</a>
-      <a href="#" class="btn btn-outline" onclick="document.getElementById('newsletter-anchor').scrollIntoView({behavior:'smooth'});return false;">Get the weekly drill</a>
     </div>
   </div>
 
@@ -484,36 +599,16 @@
       <div class="note" id="results-note">Search or filter by topic.</div>
     </div>
 
-    <div class="finder-bar">
-      <div class="search-box">
-        <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><circle cx="8.5" cy="8.5" r="6" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="13" y1="13" x2="18" y2="18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-        <input type="text" id="article-search" placeholder="Search guides — e.g. racket, shoes, tension" oninput="renderGrid()">
-      </div>
-      <div class="filter-chips" id="filter-chips"></div>
-    </div>
-
     <div class="article-grid" id="article-grid"></div>
   </div>
 
-  <div class="wrap" style="padding-bottom: 64px;">
+  <div class="wrap" style="padding-bottom: 80px;">
     <div class="product-callout">
       <div>
         <h3>Want a full season plan, not just drills?</h3>
         <p>Shuttle Life's training programs go deeper than a blog post can — built by a head coach for club players who want structure.</p>
       </div>
-      <a href="#" class="btn btn-accent" onclick="return confirm('Placeholder — link this to your Shuttle Life Gumroad membership page.')">See Shuttle Life →</a>
-    </div>
-  </div>
-
-  <div class="wrap" style="padding-bottom: 80px;" id="newsletter-anchor">
-    <div class="newsletter">
-      <h3>One drill, one gear tip, every Sunday</h3>
-      <p>Short email. No fluff. Unsubscribe whenever.</p>
-      <form class="signup-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Added — check your inbox';">
-        <input type="email" placeholder="you@email.com" required>
-        <button type="submit">Sign up</button>
-      </form>
-      <div class="form-note">Prototype form — connect to your email provider (e.g. ConvertKit, Mailchimp) before launch.</div>
+      <a href="https://shuttle-life.com" class="btn btn-accent" target="_blank" rel="noopener">See Shuttle Life →</a>
     </div>
   </div>
 
@@ -528,6 +623,10 @@
       <h2 class="title" id="post-title"></h2>
       <div class="meta" id="post-meta"></div>
       <div id="post-body"></div>
+      <button type="button" class="share-fb" onclick="shareOnFacebook()">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.5-3h-3V8.5c0-.9.2-1.5 1.5-1.5H16V4.2C15.7 4.1 14.7 4 13.5 4 11 4 9.5 5.5 9.5 8.2v2.3H7v3h2.5V21h4Z"/></svg>
+        Share on Facebook
+      </button>
     </div>
 
     <div class="related">
@@ -537,10 +636,59 @@
   </div>
 </div>
 
+<!-- ============ STATIC PAGES (Privacy / About / Contact) ============ -->
+<div data-view="privacy">
+  <div class="wrap section">
+    <a href="#" onclick="showView('home');return false;" style="font-weight:700; font-size:14px; text-decoration:none; color: var(--court);">← Back to guides</a>
+    <div class="post">
+      <h2 class="title">Privacy Policy</h2>
+      <div class="meta">Last updated September 2026</div>
+      <p>Badminton Rally ("we", "this site") respects your privacy. This page explains what data is collected and how it's used.</p>
+      <h3>Affiliate links</h3>
+      <p>This site contains affiliate links (including AliExpress and other partner programs). If you click a link and make a purchase, we may earn a commission at no extra cost to you.</p>
+      <h3>Analytics</h3>
+      <p>We use Google Analytics to understand how visitors use this site (pages viewed, general location, device type). This data is aggregated and does not identify you personally.</p>
+      <h3>Advertising</h3>
+      <p>This site may display ads served by Google AdSense. Google may use cookies to serve ads based on your prior visits to this or other websites. You can opt out of personalized advertising at <a href="https://adssettings.google.com" target="_blank" rel="noopener">adssettings.google.com</a>.</p>
+      <h3>Contact</h3>
+      <p>Questions about this policy? Reach out via the <a href="#" onclick="showView('contact');return false;">contact page</a>.</p>
+    </div>
+  </div>
+</div>
+
+<div data-view="about">
+  <div class="wrap section">
+    <a href="#" onclick="showView('home');return false;" style="font-weight:700; font-size:14px; text-decoration:none; color: var(--court);">← Back to guides</a>
+    <div class="post">
+      <h2 class="title">About Badminton Rally</h2>
+      <div class="meta">Gear guides and training advice for club players</div>
+      <p>Badminton Rally publishes straight-talking gear reviews and training guides for club and league players — the kind of advice we wish existed when we were buying our first "real" racket.</p>
+      <p>No sponsored reviews dressed up as independent opinions. When we recommend a product, it's because it fits the price point and skill level we're writing for — and yes, some links are affiliate links, clearly marked as such.</p>
+      <p>Badminton Rally is built by the team behind <a href="https://shuttle-life.com" target="_blank" rel="noopener">Shuttle Life</a>, a badminton coaching brand offering structured training programs and memberships.</p>
+    </div>
+  </div>
+</div>
+
+<div data-view="contact">
+  <div class="wrap section">
+    <a href="#" onclick="showView('home');return false;" style="font-weight:700; font-size:14px; text-decoration:none; color: var(--court);">← Back to guides</a>
+    <div class="post">
+      <h2 class="title">Contact</h2>
+      <div class="meta">Questions, corrections, or partnership inquiries</div>
+      <p>Have a question about a guide, spotted something that needs correcting, or interested in a partnership? Reach out through our <a href="https://shuttle-life.com" target="_blank" rel="noopener">Shuttle Life</a> contact page, and mention Badminton Rally in your message.</p>
+    </div>
+  </div>
+</div>
+
 <footer>
   <div class="wrap footer-inner">
     <div>Badminton Rally — gear guides for club players.</div>
-    <div>badmintonrally.com</div>
+    <div><a href="https://shuttle-life.com" target="_blank" rel="noopener" style="color: inherit;">Shuttle Life training & memberships →</a></div>
+  </div>
+  <div class="wrap" style="padding-top: 12px; font-size: 13px;">
+    <a href="#" onclick="showView('about');return false;" style="color: var(--muted); text-decoration: none; margin-right: 16px;">About</a>
+    <a href="#" onclick="showView('contact');return false;" style="color: var(--muted); text-decoration: none; margin-right: 16px;">Contact</a>
+    <a href="#" onclick="showView('privacy');return false;" style="color: var(--muted); text-decoration: none;">Privacy Policy</a>
   </div>
 </footer>
 
@@ -576,7 +724,7 @@ var articles = [
           <strong>Even-balance, 4U, medium flex frame</strong>
           <span>Good default for club players rebuilding technique or coming back after a break</span>
         </div>
-        <a href="#" class="buy" onclick="return confirm('Placeholder — replace with your approved affiliate link once accepted into Involve Asia.')">Check price →</a>
+        <a href="https://s.click.aliexpress.com/e/_c3UnvUKh" class="buy" target="_blank" rel="noopener">Check price →</a>
       </div>
       <h3>What to ignore</h3>
       <ul>
@@ -611,10 +759,17 @@ var articles = [
       </div>
       <div class="pick-box">
         <div class="info">
-          <strong>Pack of tacky overgrips</strong>
-          <span>Budget multi-pack, good for players who sweat heavily</span>
+          <strong>Alpsport Pro Grip overgrip</strong>
+          <span>Ultra-absorbent, non-slip — the one we use</span>
         </div>
-        <a href="#" class="buy" onclick="return confirm('Placeholder — replace with your approved affiliate link once accepted into Involve Asia.')">Check price →</a>
+        <a href="https://s.click.aliexpress.com/e/_c3VMrc6p" class="buy" target="_blank" rel="noopener">Check price →</a>
+      </div>
+      <div class="pick-box">
+        <div class="info">
+          <strong>Alpsport Gradient overgrip (3-pack)</strong>
+          <span>Budget multi-pack, good for players who sweat heavily and go through grips fast</span>
+        </div>
+        <a href="https://s.click.aliexpress.com/e/_c35WQqDP" class="buy" target="_blank" rel="noopener">Check price →</a>
       </div>
       <h3>How to tell your grip size is actually wrong</h3>
       <p>If you're re-wrapping constantly because the grip feels too thin no matter what, you may need a larger base grip size, not just fresh tape.</p>
@@ -649,6 +804,144 @@ var articles = [
       <h3>How to use this</h3>
       <p>Two or three sessions a week, 15 minutes each, is enough to notice a difference in your court movement within a month — without needing any court access at all.</p>
     `
+  },
+  {
+    id: 'shoes-under-50',
+    tag: 'GEAR',
+    title: 'Best Badminton Shoes Under $50',
+    excerpt: 'Grip, ankle support, and durability on indoor courts — three solid picks without paying for a pro endorsement.',
+    readTime: '6 min read',
+    updated: 'September 2026',
+    body: `
+      <p>Running shoes will hurt you on a badminton court. That's not an exaggeration — the lateral lunges and sudden stops badminton demands need a completely different sole and ankle structure, and this is the single most common mistake new players make with their budget.</p>
+      <h3>What actually matters at this price point</h3>
+      <p><strong>Gum rubber soles</strong>, not standard rubber — gum rubber grips indoor court surfaces without squeaking-and-sliding. Cheaper shoes skip this and swap in harder rubber that looks similar but slides under lateral pressure.</p>
+      <p><strong>A wider toe box</strong> than running shoes. Badminton footwork pushes your foot forward on lunges; a narrow toe box means bruised toenails within a few sessions.</p>
+      <p><strong>Some ankle structure</strong>, even if it's not a full ankle-support shoe. You don't need the $150 model, but a shoe with zero lateral structure will let your ankle roll on a hard cut.</p>
+      <h3>What to skip at this price</h3>
+      <p>Don't chase "power cushioning" marketing terms — at the budget tier, that's usually just standard EVA foam with a new name. And don't buy running shoes because they're cheaper; you'll spend the savings on a rolled ankle recovery.</p>
+      <div class="pick-box">
+        <div class="info">
+          <strong>Yonex Power Cushion 47</strong>
+          <span>~$45-50 · big-brand name at true budget tier, non-marking gum sole</span>
+        </div>
+        <a href="#" class="buy" onclick="return confirm('Placeholder — replace with your approved affiliate link once accepted into Involve Asia (Shopee/Tokopedia).')">Check price →</a>
+      </div>
+      <div class="pick-box">
+        <div class="info">
+          <strong>Victor AS-30 H</strong>
+          <span>~$45-50 · well-reviewed entry shoe, strong lateral stability for the price</span>
+        </div>
+        <a href="#" class="buy" onclick="return confirm('Placeholder — replace with your approved affiliate link once accepted into Involve Asia (Shopee/Tokopedia).')">Check price →</a>
+      </div>
+      <div class="pick-box">
+        <div class="info">
+          <strong>Li-Ning Ranger Lite</strong>
+          <span>~$50-55 · excellent value just above the $50 line, strong indoor-court grip</span>
+        </div>
+        <a href="#" class="buy" onclick="return confirm('Placeholder — replace with your approved affiliate link once accepted into Involve Asia (Shopee/Tokopedia).')">Check price →</a>
+      </div>
+      <p><strong>Bottom line:</strong> at under $50, prioritize sole compound over cushioning marketing. A $40 shoe with proper gum rubber will outperform a $60 shoe with a flashy name and standard rubber.</p>
+    `
+  },
+  {
+    id: 'beginner-rackets',
+    tag: 'GEAR',
+    title: "Badminton Rackets for Beginners: Don't Overbuy",
+    excerpt: 'Why a pro-level frame will slow your progress, not speed it up — and three honest entry-level picks.',
+    readTime: '5 min read',
+    updated: 'September 2026',
+    body: `
+      <p>Every beginner asks the same question: "should I just buy a good racket so I don't need to upgrade later?" The honest answer is no — and here's why that instinct backfires.</p>
+      <h3>Why pro-level rackets hurt beginners</h3>
+      <p>Advanced rackets are stiff, because advanced players generate their own power and want control, not help. A beginner swinging a stiff-shafted racket gets almost no help generating power, which means compensating with bigger, less controlled swings — building exactly the wrong habits you'll need to unlearn later.</p>
+      <h3>What a beginner racket should actually have</h3>
+      <p>A flexible-to-medium shaft that helps generate power on a shorter swing. Slightly head-light or even balance, so the racket is forgiving on mistimed shots — beginners mistime a lot of shots, that's the whole point of being a beginner. And a comfortable grip size; an oversized grip strains the wrist before technique is even a factor.</p>
+      <div class="pick-box">
+        <div class="info">
+          <strong>Victor Brave JR 6000</strong>
+          <span>~$45 · most affordable tier, even balance, forgiving on off-center hits</span>
+        </div>
+        <a href="#" class="buy" onclick="return confirm('Placeholder — replace with your approved affiliate link once accepted into Involve Asia (Shopee/Tokopedia).')">Check price →</a>
+      </div>
+      <div class="pick-box">
+        <div class="info">
+          <strong>Alpsport V5 5U, entry level</strong>
+          <span>~$55-70 · full carbon fiber, forgiving flex, sold with gift box — the one we can link today</span>
+        </div>
+        <a href="https://s.click.aliexpress.com/e/_c3UnvUKh" class="buy" target="_blank" rel="noopener">Check price →</a>
+      </div>
+      <div class="pick-box">
+        <div class="info">
+          <strong>Li-Ning Windstorm 72</strong>
+          <span>~$55 · very light (78g/5U), great for players who prioritize fast reactions over power</span>
+        </div>
+        <a href="#" class="buy" onclick="return confirm('Placeholder — replace with your approved affiliate link once accepted into Involve Asia (Shopee/Tokopedia).')">Check price →</a>
+      </div>
+      <h3>When to actually upgrade</h3>
+      <p>Once you can consistently clear to the back line and your footwork gets you into position before the shot (not after), that's the signal your technique has outgrown a flexible frame — not before.</p>
+    `
+  },
+  {
+    id: 'badminton-bags',
+    tag: 'GEAR',
+    title: 'Badminton Bags: What They Actually Need to Do',
+    excerpt: 'Racket count, ventilation, and string compartment — what to check before buying, at any price point.',
+    readTime: '4 min read',
+    updated: 'September 2026',
+    body: `
+      <p>A badminton bag seems like a simple purchase until your rackets are covered in shoe dust and your grip tape smells like a locker room. A few features separate a good bag from a bag-shaped sack.</p>
+      <h3>Racket compartment count</h3>
+      <p>Most club players only need a 2-3 racket bag. Don't pay for a 6-racket bag "to be safe" unless you're actually stringing for a team — the extra size just becomes dead weight you carry for nothing.</p>
+      <h3>Ventilated shoe compartment</h3>
+      <p>This is the single most-skipped feature on budget bags. A separate, ventilated shoe pocket keeps sweat and odor away from your rackets and clothes — non-negotiable if you're commuting straight from work to the court.</p>
+      <h3>A dedicated string/accessory pocket</h3>
+      <p>Spare grip tape, extra strings, and a small first-aid item (blister plasters are common) need their own space so they don't tangle with your gear.</p>
+      <div class="pick-box">
+        <div class="info">
+          <strong>Alpsport PVC Badminton Racket Bag</strong>
+          <span>~$24-40 · 2-racket capacity, thickened nylon interior, PVC laminated exterior — the bag we actually use</span>
+        </div>
+        <a href="https://s.click.aliexpress.com/e/_c4otJ6fT" class="buy" target="_blank" rel="noopener">Check price →</a>
+      </div>
+      <div class="pick-box">
+        <div class="info">
+          <strong>Hundred Cosmogear Kit Bag</strong>
+          <span>~$45 · true-budget pick, good if the bag is mostly stored indoors rather than hot car trunks</span>
+        </div>
+        <a href="#" class="buy" onclick="return confirm('Placeholder — replace with your approved affiliate link once accepted into Involve Asia (Shopee/Tokopedia).')">Check price →</a>
+      </div>
+      <div class="pick-box">
+        <div class="info">
+          <strong>Yonex Ace 1</strong>
+          <span>~$75 · thermal-lined racket compartment, matters if the bag sits in tropical heat</span>
+        </div>
+        <a href="#" class="buy" onclick="return confirm('Placeholder — replace with your approved affiliate link once accepted into Involve Asia (Shopee/Tokopedia).')">Check price →</a>
+      </div>
+    `
+  },
+  {
+    id: 'nutrition-recovery',
+    tag: 'TRAINING',
+    title: 'Nutrition and Recovery After Badminton Training',
+    excerpt: 'What your body actually needs after intense court sessions — practical, low-cost meal ideas, no supplements required.',
+    readTime: '6 min read',
+    updated: 'September 2026',
+    body: `
+      <p>Badminton is one of the most physically demanding racket sports — constant direction changes, explosive jumps, and matches that can run well over an hour. Recovery isn't optional if you're playing more than once a week.</p>
+      <h3>The 30-minute window</h3>
+      <p>Within about 30 minutes of finishing, your muscles are primed to absorb protein and carbohydrates efficiently. This doesn't require a shake — a banana with a handful of nuts, or rice with eggs, does the same job without any powder.</p>
+      <h3>Hydration is not just water</h3>
+      <p>Badminton sessions in warm, humid indoor halls (common across South and Southeast Asia) mean you're losing more than just water — sodium and potassium go with the sweat. A pinch of salt and a squeeze of lime in water works as well as a branded electrolyte drink for a normal club session.</p>
+      <h3>Simple, affordable recovery meals</h3>
+      <ul>
+        <li>Rice, dal, and a boiled egg — a complete, cheap post-training meal common across the region</li>
+        <li>Banana + peanut butter on toast</li>
+        <li>Greek yogurt or curd with fruit, if dairy sits well with you</li>
+      </ul>
+      <h3>What to skip</h3>
+      <p>You don't need a recovery supplement stack for club-level play twice a week. Save that money — or put it toward better shoes.</p>
+    `
   }
 ];
 
@@ -671,6 +964,8 @@ function setFilter(tag) {
   activeTag = tag;
   renderChips();
   renderGrid();
+  showView('home');
+  document.getElementById('article-grid').scrollIntoView({behavior:'smooth', block:'start'});
 }
 
 function renderGrid() {
@@ -700,9 +995,12 @@ function renderGrid() {
   }).join('');
 }
 
+var currentArticle = null;
+
 function openArticle(id) {
   var a = articles.find(function(x){ return x.id === id; });
   if (!a) return;
+  currentArticle = a;
   document.getElementById('post-title').textContent = a.title;
   document.getElementById('post-meta').textContent = a.tag.charAt(0) + a.tag.slice(1).toLowerCase() + ' guide · ' + a.readTime + ' · Last updated ' + a.updated;
   document.getElementById('post-body').innerHTML = a.body;
@@ -710,6 +1008,14 @@ function openArticle(id) {
   showView('post');
   history.replaceState(null, '', '#' + id);
   document.title = a.title + ' — Badminton Rally';
+}
+
+function shareOnFacebook() {
+  if (!currentArticle) return;
+  var url = location.href;
+  var quote = currentArticle.title + ' — ' + currentArticle.excerpt;
+  var shareUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url) + '&quote=' + encodeURIComponent(quote);
+  window.open(shareUrl, 'facebook-share', 'width=580,height=520');
 }
 
 function renderRelated(current) {
