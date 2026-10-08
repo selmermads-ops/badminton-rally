@@ -8,7 +8,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Badminton Rally">
 <meta property="og:title" content="Badminton Rally — Badminton gear & training that actually works">
-<meta property="og:description" content="Straight-talking gear guides and training plans for club and league players — no sponsorships pretending to be reviews.">
+<meta property="og:description" content="Straight-talking gear guides and training plans for club and league players — clear advice for club and league players.">
 <meta property="og:url" content="https://badmintonrally.com">
 <meta name="description" content="Straight-talking badminton gear reviews and training guides for club and league players. Rackets, shoes, bags, and grip advice — no sponsored fluff.">
 <link rel="canonical" href="https://badmintonrally.com/">
@@ -531,6 +531,47 @@
 
   [data-view] { display: none; }
   [data-view].active { display: block; }
+
+/* Magazine design */
+:root,:root[data-theme="dark"]{--court:#173b35;--court-deep:#102b27;--ink:#172c28;--paper:#f7f5ef;--card:#fff;--accent:#d6ed79;--accent-ink:#19342a;--muted:#62706a;--border:#dce1d7;--font-display:Georgia,'Times New Roman',serif;--font-body:'Source Sans 3',sans-serif}
+body{background-image:none;background-color:var(--paper)}
+.wrap,.header-inner,.hero-inner{max-width:1180px}
+header{background:var(--paper);border-bottom:1px solid var(--border)}
+.header-inner{padding-top:24px;padding-bottom:24px}
+.logo-word{font-family:var(--font-display);letter-spacing:-1.3px;font-size:30px}
+.logo-tag{letter-spacing:2px;font-size:10px;text-transform:uppercase}
+nav{gap:24px}nav a{font-size:14px}
+.topbar-finder{background:#fff;border-bottom:1px solid var(--border)}
+.search-box{border-radius:6px}.disclosure{font-size:11px;padding:10px 20px;background:var(--paper);color:var(--muted)}
+.hero{margin:20px auto 0;max-width:1180px;border-radius:8px;background:#173b35}
+.court-lines{display:none}
+.hero-inner{display:grid;grid-template-columns:1.25fr 1fr;gap:52px;padding:64px 54px;align-items:center}
+.hero h1{font-size:clamp(40px,5vw,66px);font-weight:400;line-height:1.06;letter-spacing:-2px;max-width:12ch}
+.hero p{font-size:18px;line-height:1.6;color:#d4e0d7;max-width:43ch}
+.eyebrow{display:block;font:700 11px var(--font-body);letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:24px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.btn{border-radius:5px;padding:13px 20px}.btn-accent{box-shadow:none}.btn-outline{margin:0}
+.hero-feature{background:#244b43;border:1px solid #44665a;border-radius:6px;padding:26px;color:#fff}
+.hero-art{display:block;width:100%;height:190px;margin-bottom:20px}
+.hero-feature small{font-size:11px;letter-spacing:2px;color:var(--accent)}
+.hero-feature h2{font-family:var(--font-display);font-weight:400;font-size:29px;line-height:1.2;margin:12px 0}
+.hero-feature a{color:#e4f3ab;font-weight:600;text-decoration:none}
+.editor-strip{display:flex;justify-content:space-between;gap:20px;padding:20px 0;border-bottom:1px solid var(--border);font-size:12px;color:var(--muted)}
+.section{padding:52px 0}.section-head{border-bottom:1px solid var(--border);padding-bottom:20px}
+.section-head h2{font-size:34px;font-weight:400;letter-spacing:-.7px}
+.article-grid{gap:24px}.article{background:#fff;border:1px solid var(--border);border-radius:6px;padding:28px;box-shadow:none;transition:transform .18s,border-color .18s}
+.article:hover{transform:translateY(-3px);border-color:#75917c;box-shadow:none}
+.article h3{font-family:var(--font-display);font-size:25px;font-weight:400;line-height:1.25;letter-spacing:-.4px}
+.article p{font-size:15px;line-height:1.6}.article-tag{font-size:10px;letter-spacing:1.5px;color:#496b4d;background:#eff4e9;border-radius:3px}
+.article-reading{font-size:11px;color:var(--muted);margin-top:20px;padding-top:16px;border-top:1px solid var(--border)}
+.article .read{font-size:13px}.product-callout{border-radius:6px;background:#e9eedf;border:1px solid #d7dfca;color:var(--ink);padding:34px}
+.product-callout h3{font-family:var(--font-display);font-weight:400;font-size:29px}.product-callout p{color:var(--muted)}
+.post{max-width:760px}.post .title{font-weight:400;letter-spacing:-1.5px;line-height:1.12}.post p,.post li{line-height:1.8}
+footer{background:#173b35;color:#d9e3da;padding:38px 0}footer a{color:#d9e3da!important}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #90a85d;outline-offset:4px}
+@media(max-width:1220px){.hero{margin-left:20px;margin-right:20px}.editor-strip{margin:0 24px}}
+@media(max-width:760px){.hero-inner{grid-template-columns:1fr;padding:36px 26px;gap:30px}.hero h1{max-width:16ch;letter-spacing:-1px}.hero-art{height:140px}.editor-strip{flex-wrap:wrap;gap:8px 20px}.logo-word{font-size:24px}nav{gap:14px}.section{padding:36px 0}.article{padding:24px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;scroll-behavior:auto!important}}
+
 </style>
 </head>
 <body>
@@ -553,7 +594,7 @@
       </svg>
       <span class="logo-text">
         <span class="logo-word">Badminton<em>Rally</em></span>
-        <span class="logo-tag">News · Guides · Insights</span>
+        <span class="logo-tag">Gear · Technique · Training</span>
       </span>
     </a>
     <nav>
@@ -579,24 +620,24 @@
 <!-- ============ HOME VIEW ============ -->
 <div data-view="home" class="active">
 
-  <div class="hero">
-    <div class="court-lines">
-      <svg viewBox="0 0 1080 400" preserveAspectRatio="none">
-        <rect x="40" y="30" width="1000" height="340" fill="none" stroke="#F5F6EF" stroke-width="2"/>
-        <line x1="40" y1="200" x2="1040" y2="200" stroke="#F5F6EF" stroke-width="2"/>
-        <line x1="540" y1="30" x2="540" y2="370" stroke="#F5F6EF" stroke-width="1.5" stroke-dasharray="6 6"/>
-      </svg>
-    </div>
+  <section class="hero" aria-label="Magazine highlights">
     <div class="hero-inner">
-      <h1>Buy the right racket the first time.</h1>
-      <p>Straight-talking gear guides and training plans for club and league players — no sponsorships pretending to be reviews.</p>
-      <a href="#" class="btn btn-accent" onclick="openArticle('racket-guide');return false;">Read the racket guide</a>
+      <div><span class="eyebrow">The badminton magazine · By Shuttle Life</span>
+      <h1>A better game starts here.</h1>
+      <p>Explore the gear, technique and training that help you make more of every session on court.</p>
+      <div class="hero-actions"><a href="#guides" class="btn btn-accent">Explore the magazine →</a><a href="#" class="btn btn-outline" onclick="openArticle('racket-guide');return false;">Start with rackets</a></div></div>
+      <div class="hero-feature">
+        <svg class="hero-art" viewBox="0 0 400 220" aria-hidden="true"><path d="M15 200H385M65 200L140 20H260L335 200M105 110H295M200 20V200" fill="none" stroke="#608176" stroke-width="1"/><g transform="rotate(28 220 105)"><ellipse cx="220" cy="70" rx="45" ry="58" fill="#173b35" stroke="#d6ed79" stroke-width="4"/><path d="M220 128V203" stroke="#d6ed79" stroke-width="7"/><path d="M190 30V110M205 18V123M220 14V126M235 18V123M250 30V110M180 50H260M177 65H263M177 80H263M182 95H258" stroke="#739778" stroke-width="1"/></g><g transform="translate(80 150) rotate(-22)"><path d="M0 0L-22-46L22-46Z" fill="#e5edd9"/><path d="M0 0V-46M0 0L-12-46M0 0L12-46" stroke="#8ea28c"/><ellipse cy="3" rx="10" ry="8" fill="#d6ed79"/></g></svg>
+        <small>THE ESSENTIAL GUIDE</small><h2>Find the racket that fits your game.</h2>
+        <a href="#" onclick="openArticle('racket-guide');return false;">Read our racket guide →</a>
+      </div>
     </div>
-  </div>
+  </section>
+  <div class="wrap editor-strip"><span>GEAR & EQUIPMENT</span><span>TECHNIQUE & TRAINING</span><span>FOR CLUB & LEAGUE PLAYERS</span></div>
 
   <div class="wrap section">
     <div class="section-head">
-      <h2>Find a guide</h2>
+      <h2 id="guides">Inside the magazine</h2>
       <div class="note" id="results-note">Search or filter by topic.</div>
     </div>
 
@@ -664,7 +705,7 @@
       <h2 class="title">About Badminton Rally</h2>
       <div class="meta">Gear guides and training advice for club players</div>
       <p>Badminton Rally publishes straight-talking gear reviews and training guides for club and league players — the kind of advice we wish existed when we were buying our first "real" racket.</p>
-      <p>No sponsored reviews dressed up as independent opinions. When we recommend a product, it's because it fits the price point and skill level we're writing for — and yes, some links are affiliate links, clearly marked as such.</p>
+      <p>Our guides focus on helping club players understand their options. Some product links are affiliate links: we may earn a commission from qualifying purchases, at no extra cost to you.</p>
       <p>Badminton Rally is built by the team behind <a href="https://shuttle-life.com" target="_blank" rel="noopener">Shuttle Life</a>, a badminton coaching brand offering structured training programs and memberships.</p>
     </div>
   </div>
@@ -991,6 +1032,7 @@ function renderGrid() {
       '<div class="article-tag">' + a.tag + '</div>' +
       '<h3>' + a.title + '</h3>' +
       '<p>' + a.excerpt + '</p>' +
+      '<div class="article-reading">' + a.readTime + ' · ' + a.updated + '</div>' +
       '<a href="#" class="read" onclick="openArticle(\'' + a.id + '\');return false;">Read the guide →</a>' +
     '</div>';
   }).join('');
@@ -1038,6 +1080,7 @@ function renderRelated(current) {
       '<div class="article-tag">' + a.tag + '</div>' +
       '<h3>' + a.title + '</h3>' +
       '<p>' + a.excerpt + '</p>' +
+      '<div class="article-reading">' + a.readTime + ' · ' + a.updated + '</div>' +
       '<a href="#" class="read" onclick="openArticle(\'' + a.id + '\');return false;">Read the guide →</a>' +
     '</div>';
   }).join('');
