@@ -54,7 +54,22 @@ async function checkInvolve(env, fetcher) {
   const candidate = typeof generated === 'string' ? generated : generated?.deeplink ?? generated?.link ?? generated?.url ?? generated?.tracking_link;
   let valid = false;
   try { valid = new URL(candidate).protocol === 'https:'; } catch {}
-  return { ...summary, linkGeneration: link.data?.status === 'success' && valid ? 'ok' : 'unexpected_response', linkResponseFields: generated && typeof generated === 'object' ? Object.keys(generated).filter(k => /^[a-z_]{1,40}$/i.test(k)) : [], linkHost: valid ? new URL(candidate).hostname : null };
+  let redirectStatus = 'not_verified';
+  if (valid && link.data?.status === 'success') {
+    let next = new URL(candidate);
+    for (let hop = 0; hop < 5; hop++) {
+      const host = next.hostname;
+      const allowed = ['invl.me', 'involve.asia', 'banggood.com'].some(d => host === d || host.endsWith('.' + d));
+      if (next.protocol !== 'https:' || !allowed || next.username || next.password) { redirectStatus = 'unexpected_redirect'; break; }
+      if (host === 'banggood.com' || host.endsWith('.banggood.com')) { redirectStatus = 'destination_verified'; break; }
+      const response = await fetcher(next.href, { method: 'GET', redirect: 'manual', signal: AbortSignal.timeout(5000) });
+      await response.body?.cancel();
+      const location = response.headers.get('location');
+      if (![301,302,303,307,308].includes(response.status) || !location) { redirectStatus = 'not_verified'; break; }
+      next = new URL(location, next);
+    }
+  }
+  return { ...summary, redirectStatus, linkGeneration: link.data?.status === 'success' && valid ? 'ok' : 'unexpected_response', linkResponseFields: generated && typeof generated === 'object' ? Object.keys(generated).filter(k => /^[a-z_]{1,40}$/i.test(k)) : [], linkHost: valid ? new URL(candidate).hostname : null };
 }
 
 export async function aliRequest(method, extra, env, fetcher = fetch) {
