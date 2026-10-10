@@ -1,0 +1,10 @@
+[build]
+  command = "node scripts/build.mjs"
+  publish = "dist"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+[functions."affiliate-check"]
+  schedule = "0 6 * * *"
