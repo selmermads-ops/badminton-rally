@@ -29,8 +29,16 @@ async function checkInvolve(env, fetcher) {
     method: 'POST', headers: { Authorization: `Bearer ${token}`, Accept: 'application/json', 'Content-Type': 'application/json' }, body: '{}'
   }, fetcher);
   if (offers.failure) return { authentication: 'ok', offers: offers.failure };
-  const rows = offers.data?.data;
-  if (offers.data?.status !== 'success' || !Array.isArray(rows)) return { authentication: 'ok', offers: 'unexpected_response' };
+  const payload = offers.data?.data;
+  const rows = Array.isArray(payload) ? payload : payload?.offers ?? payload?.data ?? offers.data?.offers;
+  if (offers.data?.status !== 'success' || !Array.isArray(rows)) return {
+    authentication: 'ok', offers: 'unexpected_response',
+    responseShape: {
+      topLevelKeys: Object.keys(offers.data || {}).filter(k => /^[a-z_]{1,32}$/i.test(k)).slice(0, 20),
+      dataKeys: payload && typeof payload === 'object' && !Array.isArray(payload) ? Object.keys(payload).filter(k => /^[a-z_]{1,32}$/i.test(k)).slice(0, 20) : [],
+      successStatus: offers.data?.status === 'success'
+    }
+  };
   return { authentication: 'ok', offers: 'ok', offerCount: rows.length, linkGeneration: 'not_tested' };
 }
 
