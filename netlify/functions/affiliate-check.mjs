@@ -39,7 +39,22 @@ async function checkInvolve(env, fetcher) {
       successStatus: offers.data?.status === 'success'
     }
   };
-  return { authentication: 'ok', offers: 'ok', offerCount: rows.length, offerFieldNames: Object.keys(rows[0] || {}).filter(k => /^[a-z_]{1,40}$/i.test(k)), linkGeneration: 'not_tested' };
+  const selected = rows.find(r => /banggood/i.test(r.offer_name || ''));
+  if (!selected) return { authentication: 'ok', offers: 'ok', offerCount: rows.length, linkGeneration: 'no_test_offer' };
+  let destination;
+  try { destination = new URL(selected.preview_url); } catch { return { authentication: 'ok', offers: 'ok', offerCount: rows.length, linkGeneration: 'invalid_preview_url' }; }
+  if (destination.protocol !== 'https:' || !(destination.hostname === 'banggood.com' || destination.hostname.endsWith('.banggood.com'))) return { authentication: 'ok', offers: 'ok', offerCount: rows.length, linkGeneration: 'unexpected_destination' };
+  const link = await readJSON('https://api.involve.asia/api/deeplink/generate', {
+    method: 'POST', headers: { Authorization: `Bearer ${token}`, Accept: 'application/json', 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams({ offer_id: String(selected.offer_id), url: destination.href, aff_sub: 'badmintonrally-api-test' }).toString()
+  }, fetcher);
+  const summary = { authentication: 'ok', offers: 'ok', offerCount: rows.length, testAdvertiser: 'Banggood', destinationHost: destination.hostname };
+  if (link.failure) return { ...summary, linkGeneration: link.failure };
+  const generated = link.data?.data;
+  const candidate = typeof generated === 'string' ? generated : generated?.deeplink ?? generated?.link ?? generated?.url ?? generated?.tracking_link;
+  let valid = false;
+  try { valid = new URL(candidate).protocol === 'https:'; } catch {}
+  return { ...summary, linkGeneration: link.data?.status === 'success' && valid ? 'ok' : 'unexpected_response', linkResponseFields: generated && typeof generated === 'object' ? Object.keys(generated).filter(k => /^[a-z_]{1,40}$/i.test(k)) : [], linkHost: valid ? new URL(candidate).hostname : null };
 }
 
 export async function aliRequest(method, extra, env, fetcher = fetch) {
