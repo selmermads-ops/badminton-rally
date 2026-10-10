@@ -39,7 +39,7 @@ async function checkInvolve(env, fetcher) {
       successStatus: offers.data?.status === 'success'
     }
   };
-  return { authentication: 'ok', offers: 'ok', offerCount: rows.length, linkGeneration: 'not_tested' };
+  return { authentication: 'ok', offers: 'ok', offerCount: rows.length, offerFieldNames: Object.keys(rows[0] || {}).filter(k => /^[a-z_]{1,40}$/i.test(k)), linkGeneration: 'not_tested' };
 }
 
 export async function aliRequest(method, extra, env, fetcher = fetch) {
