@@ -39,6 +39,24 @@ async function checkInvolve(env, fetcher) {
       successStatus: offers.data?.status === 'success'
     }
   };
+  const report = await readJSON('https://api.involve.asia/api/conversions/all', {
+    method: 'POST', headers: { Authorization: `Bearer ${token}`, Accept: 'application/json', 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams({ page: '1', limit: '100' }).toString()
+  }, fetcher);
+  let conversions;
+  if (report.failure) conversions = report.failure;
+  else {
+    const data = report.data?.data;
+    const records = Array.isArray(data) ? data : data?.data ?? data?.conversions;
+    conversions = report.data?.status === 'success' && Array.isArray(records) ? {
+      status: 'ok', returnedCount: records.length, scope: 'account_first_page',
+      totalCount: Number.isFinite(Number(data?.count)) && data?.count != null ? Number(data.count) : null,
+      hasMore: Boolean(data?.nextPage),
+      fieldNames: Object.keys(records[0] || {}).filter(k => /^[a-z_]{1,40}$/i.test(k)),
+      commissionValues: records.length ? 'schema_review_required' : 'no_records_to_verify',
+      siteAttribution: 'not_verified'
+    } : { status: 'unexpected_response', fieldNames: Object.keys(data || {}).filter(k => /^[a-z_]{1,40}$/i.test(k)) };
+  }
   const selected = rows.find(r => /banggood/i.test(r.offer_name || ''));
   if (!selected) return { authentication: 'ok', offers: 'ok', offerCount: rows.length, linkGeneration: 'no_test_offer' };
   let destination;
@@ -48,7 +66,7 @@ async function checkInvolve(env, fetcher) {
     method: 'POST', headers: { Authorization: `Bearer ${token}`, Accept: 'application/json', 'Content-Type': 'application/x-www-form-urlencoded' },
     body: new URLSearchParams({ offer_id: String(selected.offer_id), url: destination.href, aff_sub: 'badmintonrally-api-test' }).toString()
   }, fetcher);
-  const summary = { authentication: 'ok', offers: 'ok', offerCount: rows.length, testAdvertiser: 'Banggood', destinationHost: destination.hostname };
+  const summary = { authentication: 'ok', offers: 'ok', offerCount: rows.length, testAdvertiser: 'Banggood', destinationHost: destination.hostname, conversions };
   if (link.failure) return { ...summary, linkGeneration: link.failure };
   const generated = link.data?.data;
   const candidate = typeof generated === 'string' ? generated : generated?.deeplink ?? generated?.link ?? generated?.url ?? generated?.tracking_link;
@@ -101,7 +119,23 @@ async function checkAli(env, fetcher) {
   if (search.failure) return { authentication: 'ok', productSearch: search.failure };
   const products = search.result?.products?.product;
   if (!Array.isArray(products)) return { authentication: 'ok', productSearch: 'unexpected_response' };
+  const now = Date.now();
+  const topDate = ms => new Date(ms + 8 * 3600000).toISOString().slice(0, 19).replace('T', ' ');
+  const orderParams = { start_time: topDate(now - 24 * 3600000), end_time: topDate(now), page_no: '1', page_size: '50' };
+  const orderResults = await Promise.all(['Payment Completed', 'Buyer Confirmed Receipt'].map(async status => {
+    const reply = await aliRequest('aliexpress.affiliate.order.list', { ...orderParams, status }, env, fetcher);
+    if (reply.failure) return { orderStatus: status, ...reply.failure };
+    const data = reply.result;
+    const records = data?.orders?.order ?? data?.orders;
+    return { orderStatus: status, status: Array.isArray(records) ? 'ok' : 'unexpected_response',
+      returnedCount: Array.isArray(records) ? records.length : null,
+      totalCount: data?.total_record_count ?? null,
+      responseFields: Object.keys(data || {}).filter(k => /^[a-z_]{1,40}$/i.test(k)),
+      fieldNames: Array.isArray(records) ? Object.keys(records[0] || {}).filter(k => /^[a-z_]{1,40}$/i.test(k)) : [],
+      siteAttribution: 'not_verified', commissionValues: Array.isArray(records) && records.length ? 'schema_review_required' : 'no_records_to_verify' };
+  }));
   return {
+    salesReports: { window: 'last_24_hours', scope: 'account_first_page_per_status', results: orderResults },
     authentication: 'ok', productSearch: 'ok', productCount: products.length,
     affiliateLinks: env.ALIEXPRESS_TRACKING_ID ? products.filter(p => p.promotion_link).length : 'tracking_id_required',
     publication: 'not_enabled'
