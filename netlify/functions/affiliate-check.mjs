@@ -26,7 +26,7 @@ async function checkInvolve(env, fetcher) {
   const token = auth.data?.data?.token;
   if (typeof token !== 'string' || !token) return { status: 'authentication_not_confirmed' };
   const offers = await readJSON('https://api.involve.asia/api/offers/all', {
-    method: 'GET', headers: { Authorization: `Bearer ${token}`, Accept: 'application/json' }
+    method: 'POST', headers: { Authorization: `Bearer ${token}`, Accept: 'application/json', 'Content-Type': 'application/json' }, body: '{}'
   }, fetcher);
   if (offers.failure) return { authentication: 'ok', offers: offers.failure };
   const rows = offers.data?.data;
