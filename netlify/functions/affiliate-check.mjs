@@ -104,6 +104,9 @@ export async function aliRequest(method, extra, env, fetcher = fetch) {
     const code = Number(response.data.error_response.code);
     return { failure: { status: 'provider_rejected', ...(Number.isFinite(code) ? { code } : {}) } };
   }
+  if (method === 'aliexpress.affiliate.order.list' && Number(root?.resp_code) === 405 && /result.*empty/i.test(String(root?.resp_msg || ''))) {
+    return { result: { orders: { order: [] }, total_record_count: 0 }, emptyResultConfirmed: true };
+  }
   if (Number(root?.resp_code) !== 200) return { failure: { status: 'api_not_confirmed', ...(Number.isFinite(Number(root?.resp_code)) ? { code: Number(root.resp_code) } : {}) } };
   return { result: root.result };
 }
