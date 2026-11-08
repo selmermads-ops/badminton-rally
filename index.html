@@ -584,6 +584,14 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #90a8
 }
 #post-body a[href]:not(.buy):hover { text-decoration-thickness: .16em; }
 #post-body a[href]:not(.buy):focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+
+#post-body a.affiliate-button, #post-body a.affiliate-button:visited {
+  display:inline-flex; align-items:center; min-height:44px; box-sizing:border-box;
+  padding:10px 18px; border-radius:10px; white-space:normal; max-width:100%;
+  background:#145447; color:#fff; text-decoration:none; font-weight:700;
+}
+#post-body a.affiliate-button:hover { background:#103f35; color:#fff; text-decoration:underline; }
+#post-body a.affiliate-button:focus-visible { outline:2px solid currentColor; outline-offset:2px; box-shadow:0 0 0 5px #145447; }
 </style>
 </head>
 <body>
@@ -759,306 +767,131 @@ function showView(name) {
 }
 
 var articles = [
-{
-  "id": "recovery-step",
-  "tag": "TRAINING",
-  "title": "Your Recovery Step Might Be Making You Late",
-  "excerpt": "Test your recovery and split-step timing with a simple singles drill.",
-  "readTime": "3 min read",
-  "updated": "November 2026",
-  "body": "<p>You reach the rear corner, hit a decent shot and recover quickly. Then your opponent sends you straight back and you feel slow. Watch the moment before you change direction: are you still travelling towards the middle when their racket meets the shuttle?</p>\n<h3>Let their contact interrupt your recovery</h3><p>Returning towards base gives you options. Continuing there regardless of your opponent’s contact can take those options away. The <a href=\"https://www.orpingtonjuniors.com/coach_resources/docs/BWFLevel2Handbook.pdf#page=99\">BWF Level 2 Coaches’ Manual</a> describes how running recovery after a clear can interfere with split-step timing when an opponent intercepts early. A drop or smash can leave even less time before the reply.</p>\n<p>Recover while you have time; prepare to redirect as they hit. That might mean splitting before you reach your intended base.</p>\n<h3>Test the extra step</h3><p>Ask a partner to lift to your forehand rear corner. Play a straight drop and begin recovering. Your partner chooses a straight net reply or a lift back to the same corner. Reach the reply and reset.</p>\n<p>Film ten sequences from the side. When the lift goes behind you, do you take another step forwards before reversing? Repeat with one change: allow the split-step to interrupt your recovery earlier. Compare your balance and contact on the next shot. If you start waiting too early and become static, adjust again.</p>\n<p>Watch <a href=\"https://www.youtube.com/watch?v=wV5GbMZBWFI\">Shuttle Life’s split-step tutorial</a>.</p><p>For technical coaching and structured badminton training, visit <a href=\"https://shuttle-life.com\">Shuttle Life</a>.</p>"
-},
-{
-  "id": "grip-thickness-test",
-  "tag": "GEAR",
-  "title": "Your Grip Feels Comfortable. Can You Still Change It?",
-  "excerpt": "Test grip thickness and control in a fast exchange before adding another layer.",
-  "readTime": "3 min read",
-  "updated": "November 2026",
-  "body": "<p>A thick handle can feel reassuring when you pick up the racket. That does not tell you how easily you can change grips halfway through a fast exchange.</p>\n<h3>Separate security from squeezing</h3><p>Play a controlled drive exchange. After each shot, notice whether you release enough pressure to adjust the handle. If you keep clenching, identify why: is the surface slipping, is the handle hard to reposition, or are you still holding the grip from the previous shot?</p>\n<p>The <a href=\"https://badminton.lv/faili/shuttletime_skolotaja_rokasgramata_eng.pdf#page=47\">BWF Shuttle Time manual</a> uses relaxed, active fingers for grip changes, followed by a squeeze when hitting.</p>\n<h3>Compare setups, not labels</h3><p><a href=\"https://www.yonex.com/ac102\">Yonex lists AC102 Super Grap</a> at 0.6 mm thick. That is the tape specification. The base layer and wrapping overlap still affect the finished handle. Record your setup and change one thing at a time.</p>\n<h3>Try the alternating-drive test</h3><p>Ask a partner to feed twenty controlled drives, alternating forehand and backhand. Can your fingers reposition the handle? Does the racket face arrive ready? Does the handle slip when you ease your grip pressure?</p>\n<p>Then let your partner choose the side unpredictably. Repeat after one small setup change, keeping the racket, feeder and pace as similar as possible. Keep the setup that lets you adjust, secure the contact and release again.</p>\n<p>Watch <a href=\"https://www.youtube.com/watch?v=5bS37_a39PM\">Shuttle Life’s finger-power tutorial</a>.</p><p>For technical coaching and structured badminton training, visit <a href=\"https://shuttle-life.com\">Shuttle Life</a>.</p>"
-},
-{
-  "id": "smash-preparation-release",
-  "tag": "TRAINING",
-  "title": "Stop Holding Your Smash Preparation",
-  "excerpt": "Test whether your shoulder turn releases into the shot.",
-  "readTime": "3 min read",
-  "updated": "November 2026",
-  "body": "<p>Your smash preparation can look correct and still make you late. The racket shoulder goes back, the chest turns, and then the whole shape travels towards the shuttle without releasing.</p>\n<h3>Create separation, then release it</h3><p>Let the trunk begin the forward action before the racket accelerates. A <a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC5260572/\">small 3D motion study</a> found more trunk rotation in skilled than novice players and linked it to a more whip-like sequence. It does not establish a universal angle to copy.</p>\n<h3>Let the shoulder move through contact</h3><p>Preparing the racket arm does not mean keeping the shoulder lifted as you hit. <a href=\"https://www.tandfonline.com/doi/full/10.1080/14763141.2021.1877336\">Research on elite male players</a> associated faster, accurate jump smashes with a less elevated shoulder and less extended elbow at contact. That does not mean deliberately hitting low.</p>\n<h3>Try this: freeze, release, compare</h3><p>Ask a partner for comfortable lifts. For six shots, pause briefly in preparation, then hit at about 60% pace. Feel whether the trunk begins to turn before the racket accelerates. For the next six, remove the pause and keep the sequence.</p><p>Film from behind. Does the racket shoulder stay stuck behind you? Do the trunk and arm start forwards together? Can you make clean contact without forcing the arm? Use placement and contact quality as feedback before adding pace.</p>\n<p>Watch <a href=\"https://www.youtube.com/watch?v=LwHZ_lFaKzg\">Shuttle Life’s forehand power tutorial</a>.</p><p>For technical coaching and structured badminton training, visit <a href=\"https://shuttle-life.com\">Shuttle Life</a>.</p>"
-},
-{
-  "id": "backhand-drive-second-shuttle",
-  "tag": "TRAINING",
-  "title": "The Second Shuttle Exposes Your Backhand Drive",
-  "excerpt": "Use a two-shuttle drill to test racket recovery and repeatable power.",
-  "readTime": "3 min read",
-  "updated": "November 2026",
-  "body": "<p>Your first backhand drive can look powerful while leaving you late for the next one. Watch the racket after contact. Does it rebound into a useful position, or does your arm have to bring it all the way back?</p>\n<h3>Power includes the recovery</h3><p>The <a href=\"https://sfbadminton.tenniscity.org/wp-content/uploads/sites/29/2020/03/bwf_coach_education_coaches_manual_l1-2nd-edition-midres.pdf#page=114\">BWF Coaches’ Manual</a> calls for quick racket recovery using a rebound action. A large follow-through can leave you late for the next exchange.</p>\n<p>Start with the racket in front. Let the elbow and forearm create a compact preparation. Use enough finger pressure to secure contact, then release it again so the racket can adjust to the next shot.</p>\n<h3>Try this: judge the second contact</h3><p>Ask a partner to feed two flat shuttles. The first goes towards your backhand hip. Drive it straight at a controlled pace. As the racket recovers, your partner feeds the second shuttle to either side.</p><p>Count a successful pair only if the first drive reaches its target, the racket is available in front for the second feed, and the second contact needs no rescue swing. Complete twelve pairs, then repeat at slightly lower first-shot pace. If your score improves, build pace again without losing the rebound.</p>\n<p>If you squeeze continuously to stop the handle slipping, check the grip separately so you can tell which change made a difference.</p>\n<p>Watch <a href=\"https://www.youtube.com/watch?v=ifKJPuh52b4\">Shuttle Life’s Badminton Backhand Power</a>.</p><p>For technical coaching and structured badminton training, visit <a href=\"https://shuttle-life.com\">Shuttle Life</a>.</p>"
-},
-{
-  "id": "net-lift-trajectory",
-  "tag": "TRAINING",
-  "title": "Your Lift Reaches the Back. Did It Solve the Problem?",
-  "excerpt": "Choose an attacking or defensive lift from your contact height, balance and opponent’s position.",
-  "readTime": "3 min read",
-  "updated": "November 2026",
-  "body": "<p>A lift can land near the back line and still be the wrong shot. A flat lift can pass an opponent who is committed forwards. Play the same trajectory from a late, low contact and it may travel straight through their hitting zone.</p>\n<h3>Let the contact decide your first option</h3><p>When you reach the shuttle just below tape height with balance, you may have enough control to play an attacking lift. From a stretched, lower contact, a higher defensive lift gives you time to recover. The <a href=\"https://sfbadminton.tenniscity.org/wp-content/uploads/sites/29/2020/03/bwf_coach_education_coaches_manual_l1-2nd-edition-midres.pdf#page=103\">BWF Coaches’ Manual</a> distinguishes between these two purposes.</p>\n<h3>Read the racket you must pass</h3><p>If the opponent is close to the net and committed forwards, test a quick lift that clears their racket. If they are already balanced farther back, the same lift may give them a comfortable overhead contact. Consider whether a net reply would serve you better.</p>\n<h3>Try this: score the decision</h3><p>Ask a partner to feed ten shuttles to one front corner, varying the contact height. A second player starts around midcourt and chooses to move forwards or wait farther back before each lift. Score a point when your trajectory clears their available racket, reaches the intended rear area and lets you recover without rushing.</p><p>Repeat on the other side. If you film, look at where the shuttle passes the opponent as well as where it lands.</p>\n<p>See the front-court lift at 13:18 in <a href=\"https://www.youtube.com/watch?v=muINS3q7Ohk&amp;t=798s\">Shuttle Life’s tutorial</a>.</p><p>For technical coaching and structured badminton training, visit <a href=\"https://shuttle-life.com\">Shuttle Life</a>.</p>"
-},
   {
-  "id": "racket-care-bag-check",
-  "tag": "GEAR",
-  "title": "Your Racket Bag Is Where Problems Become Invisible",
-  "excerpt": "Check your strings, frame and grip before packing your badminton racket. This 30-second routine can reveal problems before your next session.",
-  "readTime": "3 min read",
-  "updated": "November 2026",
-  "body": "<p>Most players inspect their racket when something already feels wrong.</p>\n<p>A better time is immediately after training—before the racket disappears into the bag.</p>\n<p>You still remember any clashes, unusual contacts or movement in the handle. Thirty seconds now gives you better information than trying to diagnose the problem halfway through your next session.</p>\n<h3>Read the string bed under light</h3>\n<p>Turn the racket so the light passes across the strings.</p>\n<p>Look for concentrated fraying, damaged grommets or a string that no longer follows the normal pattern. Run your eyes around the frame for marks from clashes and floor contact.</p>\n<p>Li-Ning’s official maintenance guidance advises regular string inspection and timely replacement when serious fraying or cracks appear. It also warns against hard collisions and storing a racket under compression. These instructions concern Li-Ning rackets, but the inspection routine itself is useful regardless of brand. <a href=\"https://www.lining.com/product-usage-instructions\">Read Li-Ning’s product instructions</a>.</p>\n<p>The aim is not to panic over every cosmetic mark. You are establishing whether anything changed during that session.</p>\n<h3>Check what moved</h3>\n<p>Hold the racket normally and notice whether the grip surface has shifted, become unusually smooth or started separating near the cone.</p>\n<p>Then check whether the handle, shaft and frame show any movement or damage that was not present before training.</p>\n<p>Avoid making several equipment changes at once. If the grip moved, fix the grip. If the string bed changed, let a qualified stringer assess it. This preserves the information your equipment is giving you.</p>\n<h3>A racket compartment does not make a hot car safe</h3>\n<p>A dedicated compartment protects the racket from loose shoes and bottles pressing against it. It does not make prolonged car storage suitable.</p>\n<p>Yonex’s published racket precautions warn against humid locations, hot car trunks and storage that places a load on the racket. <a href=\"https://www.yonex.co.jp/assets/pdf/catalog/badminton/2024_badminton_catalog.pdf\">See the safety guidance in Yonex’s official badminton catalogue</a>.</p>\n<p>Pack the racket where it will not be compressed, then take the bag out of the car when the journey ends.</p>\n<p>If you want a separate case for transport, check the seller’s internal dimensions against your racket before ordering.</p><p><em>Affiliate disclosure: We may earn a commission on qualifying purchases at no extra cost to you.</em></p><p><a href=\"https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4E9hBlOn1IlKMO8Zu9aHFwgejmgLR7vQrcdDprBrNrpSavL625NP1q3BJIF0ftTSEC5NfbsFcvj6YhLpdo5eDkSU7ITxDTt72H52JYkX4NioRL35os9Xr1jQTva4tBhRAqgOGA9uhbJdjxQ3WRDghelB73PnmqF4Sq1f1apjVZnC7UGMpLq11ndETPsWS2LBFOlmYmzOPTk91uJ1OlGe86SnnNsQ934E7U14xeECvJe5msk8q6bLPJQKVI9rg67JOaK6qg0HzdDIA82Qtf4mGq6iWDIgmBf0HULKLpTfzEPOnpoK3ux44S5bNi02b42QzneqdIWlq8eyzaFUXvAeFUH7QDdyRpguyOyMHvCFB3yjPGszm3mz0uuNuIuFejfb41zQwSB8c0K5dTJ0YdOOcOwEwZBimNTNRZQZJPe0ZFu3arEW5ucAjJsqRxUvcn4ncn3zqZmjAbDBoJZRv3KJTTvaKo989nzVVG29oliUsxOzyV9Ymo8njj8p3IdOZInj8cvAPV3ebnPELr7ONqLvZlEp2aVzkTyGcULy26kYILNfrCZ23TS7jmwEfbPJCtcVXP6f4Tk6YUXCqvYGgAPMpVb0UL22RjfTyJ8lFHZppE8tPzBALPbm5yOBwqU3fq56JwVOG0qJD3Ta8kdAnEvSx2SAQp6vh4MoxFUepaTsPMSdDdACEqscmQUS6NM8cz7TJDP3SPVJa3MfNQ\" target=\"_blank\" rel=\"sponsored noopener\">View the hard racket case on AliExpress →</a></p><h3>Try the 30-second reset</h3>\n<p>After your next four sessions:</p>\n<ol><li>Inspect the central strings and grommets under light.</li><li>Check the frame where clashes usually occur.</li><li>Feel whether the grip has shifted or worn smooth.</li><li>Remove damp clothing from the racket compartment.</li><li>Pack the racket without shoes, bottles or other weight pressing against it.</li></ol>\n<p>Keep a short note of anything that changes.</p>\n<p>You are not trying to predict every string break or racket failure. You are creating a consistent point of comparison.</p>\n<p><strong>The best equipment check happens while you can still remember what happened on court.</strong></p>\n<p>For broader safety and technique inspiration, Shuttle Life’s <a href=\"https://www.youtube.com/watch?v=muINS3q7Ohk&amp;t=1201s\"><em>Basic Badminton for Beginners</em></a> includes a section labelled “Stroke Safety Training” at 20:01 in its indexed description. The storage routine above is a separate recommendation rather than a transcription of the video.</p>\n<p>For technical coaching and structured badminton training, visit <a href=\"https://shuttle-life.com\">Shuttle Life</a>.</p>"
-},
-  {
-  "id": "low-serve-tactics",
-  "tag": "TRAINING",
-  "title": "Your Low Serve Is In—But Is It Working?",
-  "excerpt": "Move the receiver’s contact point, disguise your placement and prepare for the reply you invite.",
-  "readTime": "3 min read",
-  "updated": "October 2026",
-  "body": "<p>A low serve can clear the tape perfectly and still give the receiver exactly what they want.</p>\n<p>Look beyond where it lands. <strong>Where does the receiver contact the shuttle—and which return have you made easy?</strong></p>\n<h3>Move their contact point</h3>\n<p>Before serving, look at the receiver’s racket position. Are they covering the T? Reaching forward? Preparing to take everything on their forehand?</p>\n<p>Use that information.</p>\n<p>A small change towards their body or away from their preferred contact point can make them adjust their racket rather than play the return they were waiting for.</p>\n<p>You don’t always need a completely different serve. Sometimes you need the same low serve aimed a little differently.</p>\n<p>Wide placement gives you another option, but it also opens different return angles. Choose it with a plan for the next shot.</p>\n<h3>Change the destination, keep the preparation</h3>\n<p>If your setup changes every time you aim somewhere different, you give the receiver an early clue.</p>\n<p>Practise different placements from a similar preparation. Ask your partner whether they could read the direction before contact.</p>\n<p>Do the same with your flick serve. Check whether you reveal it through a bigger backswing, a different shuttle position or a change in grip pressure.</p>\n<p>The receiver should have to respond to the serve—not recognise it before you hit.</p>\n<h3>Prepare for the reply you invite</h3>\n<p>Choose your serve and your next responsibility together.</p>\n<p>After contact, recover your racket and read the receiver. Avoid automatically rushing forward: a push past you needs a different response from a tight net return.</p>\n<p>Agree on the likely replies with your partner. A serve becomes more useful when both players understand what they are trying to cover afterwards.</p>\n<h3>Check your grip before changing your swing</h3>\n<p>If the handle slips during the service action, check your grip before rebuilding your technique. Keep the handle thickness comfortable and replace a worn overgrip when needed.</p>\n<p>If you are shopping for a replacement, these two generic overgrip listings are available to explore. We have not tested them or established that they match Yonex Super Grap in quality. Check the selected variant, dimensions and pack quantity before ordering.</p>\n<p><em>Affiliate disclosure: The following are affiliate links. We may earn a commission on qualifying purchases, at no extra cost to you.</em></p>\n<p><a href=\"https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4mKMwAlf67w0AKem6C2TwF7k8MVoeegK69nGOjyrI01dA4dkpdjnFFvqLyGVCyzyMER5BNRjQWXbJ7E8jqsgzaW8NweKt2reoRVmhI467bgH6iu6Ae6Nhhnd3aqY7p7bYRa0UAh6h2miDVBGNwOszZgwaWJ3GOEWxfIXFdv5V1vwgvbt2NwRtFH5JVUyp3M33RziLtUOMK6XTBkEp7ZRHcGAuZ9d91ACqfqYCsOFoldBVXhzglQA5YukA0Lx8YMNK1sQymYeWh1CivUhUM8mlPkl86rIlBWxOwnr5K63ZHAOXAWypQku6r0gUu2nsQW5UFudxcJYc2rsyt4ML61Yo9NtDBi1m77YddhPmDKZVzoUDqpKz7os3BHPBFoW2jPIN0gBsqSn6eL3Q4CaMtqxOM2eQGsHQ2Mf200JxK9YSLHrRex4A775TS1ZdjL0Xz2tKlDHKYydAE2N4pQwSEDwMcbtbTxGgypQV2jH7sLLtzB9Eccr54vrQfpwBLkBUoxcIsUx9JrA1uDGtp1apxfyBKxNuDba6Rg8I1GY5w5OibIJ6XCFaRPrWZnqvDerFsbOPBWPfeRmA6bye2xur97byqbd7H6X2a6Vskpg7B1k7bQk1sOVLx43TGbLsJmURbMZCVyTYY7QJDmgq3KcBuIYx2yD3dBieQFGnJ6cpssNLxsUOgW1R2jCqPF1X0fk3FQdwABhK2m85Oef1x\" target=\"_blank\" rel=\"sponsored noopener noreferrer\">View gradient overgrip — option 1 →</a></p>\n<p><a href=\"https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4FeNVBz22YFt74MJDpfce5hWgfJSAOLX38m5cAfDfBSgYcj55Xt2sYf5UNILO76ZWDPT1lMqJs8K6NAZXg9Wsn8kBxqZHWReNVSN3AvbDrJJL3gPaQFvC9Jy8McVvNQ7F304effoWHQkdWBmlVRHjImo3ExK6s7p7ROBxYKFivp2GIi3cBseTb3eO39UWJf5LhQzfiS4tOz5d2hRcwXJYmJzn2Jl4CVYvrsNWTbhJNeUoysnp792cviu6z6fKorxyvpT3FqSaYw8SUuPAgka4bJpOPbQBfVxeaj8MzVND7SPHFiJeufksiJuC8ythm1DF6OA9J0tMVTVYpfBktAZK6USo9PJAJXOwcnKFBSBUfx1oXUMStf1Va42g2NXere7dp3b3TepC6s8n8Ha9UNxWhizmxzwjR51YdS3c9IYdbQ7L65KWedwjUWCKGLYo77ZCJOgOJJlRo1b2BwDdJewYM2Zor58sG0Zn6eljgzsDQ8lQQZfS2wBKR0AKXjxX1zOSrGvGsbetGNU2jFxEvE44eWYDT9SXBNMKAdTbriD4g3t4T9wdUslPFJioxp1DUTvgTGFUywO7LMBKxh0Avjy6JTrxAWKq1ssmhdvbjWHvBoCP13dJZg6mumNglWhK1XoFR5eoPRjqshWBrYG3uWLbmNCdWuvzrABqH0R1dWr0sR0ZBbtYTsiz1cm7dmzoq8vItizr5X4pDVylX\" target=\"_blank\" rel=\"sponsored noopener noreferrer\">View gradient overgrip — option 2 →</a></p>\n<h3>Try this: score the return</h3>\n<p>Play three sets of ten service situations against an active receiver. Use a different low-serve placement in each set and continue through the third shot.</p>\n<p>Record:</p>\n<ul><li>Where the receiver contacted the shuttle.</li><li>Whether they played downwards, flat or upwards.</li><li>Whether your pair controlled the third shot.</li></ul>\n<p><strong>Which placement made this receiver least comfortable?</strong></p>\n<p>That answer tells you more than ten serves landing neatly beside the T.</p>\n<p>For technique feedback and structured badminton training, visit <a href=\"https://shuttle-life.com\" target=\"_blank\" rel=\"noopener\">shuttle-life.com</a>.</p>"
-},
-  {
-    id: 'racket-guide',
-    tag: 'GEAR',
-    title: 'How to choose a badminton racket without getting oversold',
-    excerpt: "Balance point, flex, and weight — what actually changes your game versus what's marketing.",
-    readTime: '8 min read',
-    updated: 'September 2026',
-    body: `
-      <p>Most racket buying advice online is written by whoever sells the racket. Here's the short version, stripped of marketing language, aimed at club and league players rather than professionals sponsored to say a frame is "explosive."</p>
-      <h3>The three numbers that actually matter</h3>
-      <p><strong>Weight (grams):</strong> Most adult rackets sit between 80–90g unstrung, marked 3U to 4U. Lighter rackets (4U) are easier on the shoulder and quicker for doubles at the net. Heavier (3U) rackets hold up better in a hitting duel but tire you out faster if your conditioning isn't there yet.</p>
-      <p><strong>Balance point:</strong> This tells you where the weight sits, not just how much there is. Head-heavy rackets hit harder but are slower to reset; head-light and even-balance rackets are faster for defense and fast exchanges. Most improving club players are better served by even-balance than the head-heavy racket their doubles partner swears by.</p>
-      <p><strong>Shaft flex:</strong> Flexible shafts help you generate power with a shorter, faster swing — useful if your technique is still developing. Stiff shafts reward players who already generate their own power and want more control and less energy loss.</p>
-      <h3>A sensible starting pick</h3>
-      <div class="pick-box">
-        <div class="info">
-          <strong>Even-balance, 4U, medium flex frame</strong>
-          <span>Good default for club players rebuilding technique or coming back after a break</span>
-        </div>
-        <a href="https://s.click.aliexpress.com/e/_c3UnvUKh" class="buy" target="_blank" rel="noopener">Check price →</a>
-      </div>
-      <h3>What to ignore</h3>
-      <ul>
-        <li>Pro player endorsements — their swing speed and training load aren't yours.</li>
-        <li>"Explosive power" framing — that's shaft flex and your technique, not a marketing word.</li>
-        <li>Buying two grades stiffer than you need "to grow into" — you'll grow into worse habits compensating for it instead.</li>
-      </ul>
-      <h3>Next step</h3>
-      <p>Once the racket fits, string tension is the next lever — and the one most players get backwards. That's the next guide in this series.</p>
-    `
+    "id": "recovery-step",
+    "tag": "TRAINING",
+    "title": "Your Recovery Step Might Be Making You Late",
+    "excerpt": "Test your recovery and split-step timing with a simple singles drill.",
+    "readTime": "3 min read",
+    "updated": "November 2026",
+    "body": "<p>You reach the rear corner, hit a decent shot and recover quickly. Then your opponent sends you straight back and you feel slow. Watch the moment before you change direction: are you still travelling towards the middle when their racket meets the shuttle?</p>\n<h3>Let their contact interrupt your recovery</h3><p>Returning towards base gives you options. Continuing there regardless of your opponent’s contact can take those options away. The <a href=\"https://www.orpingtonjuniors.com/coach_resources/docs/BWFLevel2Handbook.pdf#page=99\">BWF Level 2 Coaches’ Manual</a> describes how running recovery after a clear can interfere with split-step timing when an opponent intercepts early. A drop or smash can leave even less time before the reply.</p>\n<p>Recover while you have time; prepare to redirect as they hit. That might mean splitting before you reach your intended base.</p>\n<h3>Test the extra step</h3><p>Ask a partner to lift to your forehand rear corner. Play a straight drop and begin recovering. Your partner chooses a straight net reply or a lift back to the same corner. Reach the reply and reset.</p>\n<p>Film ten sequences from the side. When the lift goes behind you, do you take another step forwards before reversing? Repeat with one change: allow the split-step to interrupt your recovery earlier. Compare your balance and contact on the next shot. If you start waiting too early and become static, adjust again.</p>\n<p>Watch <a href=\"https://www.youtube.com/watch?v=wV5GbMZBWFI\">Shuttle Life’s split-step tutorial</a>.</p><p>For technical coaching and structured badminton training, visit <a href=\"https://shuttle-life.com\">Shuttle Life</a>.</p>"
   },
   {
-    id: 'grip-tape',
-    tag: 'GEAR',
-    title: 'Grip Tape: When and How to Change It',
-    excerpt: 'The small, overlooked detail that affects your shot control more than most equipment upgrades.',
-    readTime: '5 min read',
-    updated: 'September 2026',
-    body: `
-      <p>Grip tape is the cheapest, most frequently ignored piece of badminton equipment — and one of the few things that directly affects every single shot you hit.</p>
-      <h3>Signs it's time to change</h3>
-      <p>A shiny, smooth patch where your thumb and fingers sit means the tape has lost its texture — this is the most reliable sign, more than how old it looks. If your grip feels slick even with dry hands, or you're wrapping a fresh overgrip around a base that's already worn out, it's time.</p>
-      <h3>Overgrip vs. replacement grip — what's the difference</h3>
-      <p>A <strong>replacement grip</strong> is the base layer directly on the handle — thicker, more cushioned, meant to last months. An <strong>overgrip</strong> is a thin layer wrapped on top — cheap, tacky, and meant to be swapped every few weeks for players who sweat heavily.</p>
-      <p>Most club players only need to replace the base grip once or twice a year, but should be swapping an overgrip every 3-6 weeks of regular play.</p>
-      <div class="pick-box video-box">
-        <div class="info">
-          <strong>Watch: How to put on a badminton grip</strong>
-          <span>Step-by-step guide — removing the old grip, prepping the racket, wrapping a new one</span>
-        </div>
-        <a href="https://www.youtube.com/watch?v=680urXHmmcA" class="buy" target="_blank" rel="noopener">Watch video →</a>
-      </div>
-      <div class="pick-box">
-        <div class="info">
-          <strong>Alpsport Pro Grip overgrip</strong>
-          <span>Ultra-absorbent, non-slip — the one we use</span>
-        </div>
-        <a href="https://s.click.aliexpress.com/e/_c3VMrc6p" class="buy" target="_blank" rel="noopener">Check price →</a>
-      </div>
-      <div class="pick-box">
-        <div class="info">
-          <strong>Alpsport Gradient overgrip (3-pack)</strong>
-          <span>Budget multi-pack, good for players who sweat heavily and go through grips fast</span>
-        </div>
-        <a href="https://s.click.aliexpress.com/e/_c35WQqDP" class="buy" target="_blank" rel="noopener">Check price →</a>
-      </div>
-      <h3>How to tell your grip size is actually wrong</h3>
-      <p>If you're re-wrapping constantly because the grip feels too thin no matter what, you may need a larger base grip size, not just fresh tape.</p>
-    `
+    "id": "grip-thickness-test",
+    "tag": "GEAR",
+    "title": "Your Grip Feels Comfortable. Can You Still Change It?",
+    "excerpt": "Test grip thickness and control in a fast exchange before adding another layer.",
+    "readTime": "3 min read",
+    "updated": "November 2026",
+    "body": "<p>A thick handle can feel reassuring when you pick up the racket. That does not tell you how easily you can change grips halfway through a fast exchange.</p>\n<h3>Separate security from squeezing</h3><p>Play a controlled drive exchange. After each shot, notice whether you release enough pressure to adjust the handle. If you keep clenching, identify why: is the surface slipping, is the handle hard to reposition, or are you still holding the grip from the previous shot?</p>\n<p>The <a href=\"https://badminton.lv/faili/shuttletime_skolotaja_rokasgramata_eng.pdf#page=47\">BWF Shuttle Time manual</a> uses relaxed, active fingers for grip changes, followed by a squeeze when hitting.</p>\n<h3>Compare setups, not labels</h3><p><a href=\"https://www.yonex.com/ac102\">Yonex lists AC102 Super Grap</a> at 0.6 mm thick. That is the tape specification. The base layer and wrapping overlap still affect the finished handle. Record your setup and change one thing at a time.</p>\n<h3>Try the alternating-drive test</h3><p>Ask a partner to feed twenty controlled drives, alternating forehand and backhand. Can your fingers reposition the handle? Does the racket face arrive ready? Does the handle slip when you ease your grip pressure?</p>\n<p>Then let your partner choose the side unpredictably. Repeat after one small setup change, keeping the racket, feeder and pace as similar as possible. Keep the setup that lets you adjust, secure the contact and release again.</p>\n<p>Watch <a href=\"https://www.youtube.com/watch?v=5bS37_a39PM\">Shuttle Life’s finger-power tutorial</a>.</p><p>For technical coaching and structured badminton training, visit <a href=\"https://shuttle-life.com\">Shuttle Life</a>.</p><p><em>Affiliate disclosure: We may earn a commission on qualifying purchases at no extra cost to you.</em></p><p><a class=\"buy affiliate-button\" href=\"https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4mKMwAlf67w0AKem6C2TwF7k8MVoeegK69nGOjyrI01dA4dkpdjnFFvqLyGVCyzyMER5BNRjQWXbJ7E8jqsgzaW8NweKt2reoRVmhI467bgH6iu6Ae6Nhhnd3aqY7p7bYRa0UAh6h2miDVBGNwOszZgwaWJ3GOEWxfIXFdv5V1vwgvbt2NwRtFH5JVUyp3M33RziLtUOMK6XTBkEp7ZRHcGAuZ9d91ACqfqYCsOIFojBiClmbOSGs6A5dJAPB2HT2aIr3UaxXf9sZbhLt9xu3EmXnkWnc61qjMk7sVEmyWXQZx1HgsCgd86WKMUsPauhsg3iArKaDciD6Qbt7KwcOc1Df1RGiI9MRbgQaQFwgtMV8c5CrKqvOeM9n6xfxls85N2qnbo3SzFfQyrY0Ya3xVvIBWMQw0Uuymo7M2Li0aJ0qlWIqiGTEtipv3wiD5T3F6fP1hLRwqqHeDjLfcplxLsQ1DLNdxMEUFHGGWHZELh55rb3lc714lBmSjPN2EQruWyYf4uTAFATlhZ3COAiS18BoJToJUXbsKN1qlpSqvPvJPFD88CIddgZnmUhetZAJLGLjGqDRuOZ5XGEPsg0HNVg6MGRzB74ZSdFT67aQB9YZTujawM7MKOvlexX2U6y4fBNnIRzugwquN2u6nknZmm85fv6HXEbYRm7EyVz4wQ74fP9kJZcFXbKtWRknGpzezB7p9tsU6bzXr\" target=\"_blank\" rel=\"sponsored noopener\">View overgrip on AliExpress →</a></p>"
   },
   {
-    id: 'home-exercises',
-    tag: 'TRAINING',
-    title: '5 Exercises You Can Do at Home Without a Racket',
-    excerpt: 'Build conditioning and explosiveness between court sessions — no equipment, no court access needed.',
-    readTime: '5 min read',
-    updated: 'September 2026',
-    body: `
-      <p>Court time is limited for most club players, but conditioning between sessions is where real improvement happens. These five need no equipment and roughly 15 minutes.</p>
-      <h3>1. Shadow footwork (3 sets of 1 minute)</h3>
-      <p>Mimic the six corners of the court — front, back, and side lunges — without a shuttle. Focus on split-step timing, not speed.</p>
-      <h3>2. Lateral bounds</h3>
-      <p>Jump side to side, landing softly on one leg each time. Builds the explosive lateral push badminton constantly demands.</p>
-      <h3>3. Split-step reaction drill</h3>
-      <p>Have someone call "left," "right," "front," or "back" randomly while you split-step and react. No partner? Use a phone timer with random intervals as your cue.</p>
-      <h3>4. Wall shadow swings</h3>
-      <p>Practice your smash and clear swing motion facing a wall, focusing on full shoulder rotation rather than arm-only movement — a common beginner habit that limits power.</p>
-      <h3>5. Single-leg balance holds</h3>
-      <p>30 seconds per leg, eyes closed if you can manage it. Badminton constantly puts you on one leg mid-lunge; ankle stability here directly reduces injury risk.</p>
-      <div class="pick-box video-box">
-        <div class="info">
-          <strong>Watch: home training routine</strong>
-          <span>Follow-along footwork and conditioning you can do without a court</span>
-        </div>
-        <a href="https://www.youtube.com/watch?v=tkwT4a2uDoc" class="buy" target="_blank" rel="noopener">Watch video →</a>
-      </div>
-      <h3>How to use this</h3>
-      <p>Two or three sessions a week, 15 minutes each, is enough to notice a difference in your court movement within a month — without needing any court access at all.</p>
-    `
+    "id": "smash-preparation-release",
+    "tag": "TRAINING",
+    "title": "Stop Holding Your Smash Preparation",
+    "excerpt": "Test whether your shoulder turn releases into the shot.",
+    "readTime": "3 min read",
+    "updated": "November 2026",
+    "body": "<p>Your smash preparation can look correct and still make you late. The racket shoulder goes back, the chest turns, and then the whole shape travels towards the shuttle without releasing.</p>\n<h3>Create separation, then release it</h3><p>Let the trunk begin the forward action before the racket accelerates. A <a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC5260572/\">small 3D motion study</a> found more trunk rotation in skilled than novice players and linked it to a more whip-like sequence. It does not establish a universal angle to copy.</p>\n<h3>Let the shoulder move through contact</h3><p>Preparing the racket arm does not mean keeping the shoulder lifted as you hit. <a href=\"https://www.tandfonline.com/doi/full/10.1080/14763141.2021.1877336\">Research on elite male players</a> associated faster, accurate jump smashes with a less elevated shoulder and less extended elbow at contact. That does not mean deliberately hitting low.</p>\n<h3>Try this: freeze, release, compare</h3><p>Ask a partner for comfortable lifts. For six shots, pause briefly in preparation, then hit at about 60% pace. Feel whether the trunk begins to turn before the racket accelerates. For the next six, remove the pause and keep the sequence.</p><p>Film from behind. Does the racket shoulder stay stuck behind you? Do the trunk and arm start forwards together? Can you make clean contact without forcing the arm? Use placement and contact quality as feedback before adding pace.</p>\n<p>Watch <a href=\"https://www.youtube.com/watch?v=LwHZ_lFaKzg\">Shuttle Life’s forehand power tutorial</a>.</p><p>For technical coaching and structured badminton training, visit <a href=\"https://shuttle-life.com\">Shuttle Life</a>.</p><p><em>Affiliate disclosure: We may earn a commission on qualifying purchases at no extra cost to you.</em></p><p><a class=\"buy affiliate-button\" href=\"https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4mV5gsvtxKTx04jf6bsqfl5dngcKf5m7oZp2IAGCozuS7BB5AK43aNkdHisYuEawSlWagKuIFsWpot9ZDYFuLdGKw31aHoXjbuOFpLim19agqlPPxQg3ejcnqdWkEKSWnDY3jGzIbekRVYF8xdFX2m7UkEcjCyXuZO9yIrQaK356oJ8dvI6esTsIUYUJpyjshnOLa4eUHMGnF0eKz3TmzUoFYUVWOPlqyhIHujqdR1dOgYzv32DoZSWsKCbWNLjG0nSoZXyzBDbFVBbUqSJv5euH6xTp3UazmBAArG12bOsYUz2Mbkrf0ZgEkV8Bu7JeVnUpteRAOf4UJmvDQ9k0EspEGZcgnUZzICYWmmye0XhkXpojMHZJySD2Sk5Z7qYRvctal53xlfNY4gsgTY7dwecrTaxFa2ChWemzUzhmlfETSQtp0YQtO0AOqqTSknIeD2dZotfR1Py5DX8j3y9Yvs62eczwPOKDJC7F9T5e3loFCC8Km0cEA8CPQSv1YDUSue475H7JUwkRWB2v2UIB16w7EYMWj8ur67kugvjn4ZaeYBV8srjf2AqOdPxKqgVO8a68r7ZuwWvS4ROCydFZy1TxxK6BoPqub6PwBkgPzLUODSOdGIl4PevlUKv9yI9sQuY1SkobQkzJzzRwgLoSyvXWEs4NjN9KHBwwjHFlmXEjEthVFQ6wh0d6C59DYxvtwWekGLWo9amR5W\" target=\"_blank\" rel=\"sponsored noopener\">View swing trainer on AliExpress →</a></p>"
   },
   {
-    id: 'shoes-under-50',
-    tag: 'GEAR',
-    title: 'Best Badminton Shoes Under $50',
-    excerpt: 'Grip, ankle support, and durability on indoor courts — three solid picks without paying for a pro endorsement.',
-    readTime: '6 min read',
-    updated: 'September 2026',
-    body: `
-      <p>Running shoes will hurt you on a badminton court. That's not an exaggeration — the lateral lunges and sudden stops badminton demands need a completely different sole and ankle structure, and this is the single most common mistake new players make with their budget.</p>
-      <h3>What actually matters at this price point</h3>
-      <p><strong>Gum rubber soles</strong>, not standard rubber — gum rubber grips indoor court surfaces without squeaking-and-sliding. Cheaper shoes skip this and swap in harder rubber that looks similar but slides under lateral pressure.</p>
-      <p><strong>A wider toe box</strong> than running shoes. Badminton footwork pushes your foot forward on lunges; a narrow toe box means bruised toenails within a few sessions.</p>
-      <p><strong>Some ankle structure</strong>, even if it's not a full ankle-support shoe. You don't need the $150 model, but a shoe with zero lateral structure will let your ankle roll on a hard cut.</p>
-      <h3>What to skip at this price</h3>
-      <p>Don't chase "power cushioning" marketing terms — at the budget tier, that's usually just standard EVA foam with a new name. And don't buy running shoes because they're cheaper; you'll spend the savings on a rolled ankle recovery.</p>
-      <div class="pick-box">
-        <div class="info">
-          <strong>Yonex Power Cushion 47</strong>
-          <span>~$45-50 · big-brand name at true budget tier, non-marking gum sole</span>
-        </div>
-        <a href="#" class="buy" onclick="return confirm('Placeholder — replace with your approved affiliate link once accepted into Involve Asia (Shopee/Tokopedia).')">Check price →</a>
-      </div>
-      <div class="pick-box">
-        <div class="info">
-          <strong>Victor AS-30 H</strong>
-          <span>~$45-50 · well-reviewed entry shoe, strong lateral stability for the price</span>
-        </div>
-        <a href="#" class="buy" onclick="return confirm('Placeholder — replace with your approved affiliate link once accepted into Involve Asia (Shopee/Tokopedia).')">Check price →</a>
-      </div>
-      <div class="pick-box">
-        <div class="info">
-          <strong>Li-Ning Ranger Lite</strong>
-          <span>~$50-55 · excellent value just above the $50 line, strong indoor-court grip</span>
-        </div>
-        <a href="#" class="buy" onclick="return confirm('Placeholder — replace with your approved affiliate link once accepted into Involve Asia (Shopee/Tokopedia).')">Check price →</a>
-      </div>
-      <p><strong>Bottom line:</strong> at under $50, prioritize sole compound over cushioning marketing. A $40 shoe with proper gum rubber will outperform a $60 shoe with a flashy name and standard rubber.</p>
-    `
+    "id": "backhand-drive-second-shuttle",
+    "tag": "TRAINING",
+    "title": "The Second Shuttle Exposes Your Backhand Drive",
+    "excerpt": "Use a two-shuttle drill to test racket recovery and repeatable power.",
+    "readTime": "3 min read",
+    "updated": "November 2026",
+    "body": "<p>Your first backhand drive can look powerful while leaving you late for the next one. Watch the racket after contact. Does it rebound into a useful position, or does your arm have to bring it all the way back?</p>\n<h3>Power includes the recovery</h3><p>The <a href=\"https://sfbadminton.tenniscity.org/wp-content/uploads/sites/29/2020/03/bwf_coach_education_coaches_manual_l1-2nd-edition-midres.pdf#page=114\">BWF Coaches’ Manual</a> calls for quick racket recovery using a rebound action. A large follow-through can leave you late for the next exchange.</p>\n<p>Start with the racket in front. Let the elbow and forearm create a compact preparation. Use enough finger pressure to secure contact, then release it again so the racket can adjust to the next shot.</p>\n<h3>Try this: judge the second contact</h3><p>Ask a partner to feed two flat shuttles. The first goes towards your backhand hip. Drive it straight at a controlled pace. As the racket recovers, your partner feeds the second shuttle to either side.</p><p>Count a successful pair only if the first drive reaches its target, the racket is available in front for the second feed, and the second contact needs no rescue swing. Complete twelve pairs, then repeat at slightly lower first-shot pace. If your score improves, build pace again without losing the rebound.</p>\n<p>If you squeeze continuously to stop the handle slipping, check the grip separately so you can tell which change made a difference.</p>\n<p>Watch <a href=\"https://www.youtube.com/watch?v=ifKJPuh52b4\">Shuttle Life’s Badminton Backhand Power</a>.</p><p>For technical coaching and structured badminton training, visit <a href=\"https://shuttle-life.com\">Shuttle Life</a>.</p><p><em>Affiliate disclosure: We may earn a commission on qualifying purchases at no extra cost to you.</em></p><p><a class=\"buy affiliate-button\" href=\"https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4mKMwAlf67w0AKem6C2TwF7k8MVoeegK69nGOjyrI01dA4dkpdjnFFvqLyGVCyzyMER5BNRjQWXbJ7E8jqsgzaW8NweKt2reoRVmhI467bgH6iu6Ae6Nhhnd3aqY7p7bYRa0UAh6h2miDVBGNwOszZgwaWJ3GOEWxfIXFdv5V1vwgvbt2NwRtFH5JVUyp3M33RziLtUOMK6XTBkEp7ZRHcGAuZ9d91ACqfqYCsOIFojBiClmbOSGs6A5dJAPB2HT2aIr3UaxXf9sZbhLt9xu3EmXnkWnc61qjMk7sVEmyWXQZx1HgsCgd86WKMUsPauhsg3iArKaDciD6Qbt7KwcOc1Df1RGiI9MRbgQaQFwgtMV8c5CrKqvOeM9n6xfxls85N2qnbo3SzFfQyrY0Ya3xVvIBWMQw0Uuymo7M2Li0aJ0qlWIqiGTEtipv3wiD5T3F6fP1hLRwqqHeDjLfcplxLsQ1DLNdxMEUFHGGWHZELh55rb3lc714lBmSjPN2EQruWyYf4uTAFATlhZ3COAiS18BoJToJUXbsKN1qlpSqvPvJPFD88CIddgZnmUhetZAJLGLjGqDRuOZ5XGEPsg0HNVg6MGRzB74ZSdFT67aQB9YZTujawM7MKOvlexX2U6y4fBNnIRzugwquN2u6nknZmm85fv6HXEbYRm7EyVz4wQ74fP9kJZcFXbKtWRknGpzezB7p9tsU6bzXr\" target=\"_blank\" rel=\"sponsored noopener\">View overgrip on AliExpress →</a></p>"
   },
   {
-    id: 'beginner-rackets',
-    tag: 'GEAR',
-    title: "Badminton Rackets for Beginners: Don't Overbuy",
-    excerpt: 'Why a pro-level frame will slow your progress, not speed it up — and three honest entry-level picks.',
-    readTime: '5 min read',
-    updated: 'September 2026',
-    body: `
-      <p>Every beginner asks the same question: "should I just buy a good racket so I don't need to upgrade later?" The honest answer is no — and here's why that instinct backfires.</p>
-      <h3>Why pro-level rackets hurt beginners</h3>
-      <p>Advanced rackets are stiff, because advanced players generate their own power and want control, not help. A beginner swinging a stiff-shafted racket gets almost no help generating power, which means compensating with bigger, less controlled swings — building exactly the wrong habits you'll need to unlearn later.</p>
-      <h3>What a beginner racket should actually have</h3>
-      <p>A flexible-to-medium shaft that helps generate power on a shorter swing. Slightly head-light or even balance, so the racket is forgiving on mistimed shots — beginners mistime a lot of shots, that's the whole point of being a beginner. And a comfortable grip size; an oversized grip strains the wrist before technique is even a factor.</p>
-      <div class="pick-box">
-        <div class="info">
-          <strong>Victor Brave JR 6000</strong>
-          <span>~$45 · most affordable tier, even balance, forgiving on off-center hits</span>
-        </div>
-        <a href="#" class="buy" onclick="return confirm('Placeholder — replace with your approved affiliate link once accepted into Involve Asia (Shopee/Tokopedia).')">Check price →</a>
-      </div>
-      <div class="pick-box">
-        <div class="info">
-          <strong>Alpsport V5 5U, entry level</strong>
-          <span>~$55-70 · full carbon fiber, forgiving flex, sold with gift box — the one we can link today</span>
-        </div>
-        <a href="https://s.click.aliexpress.com/e/_c3UnvUKh" class="buy" target="_blank" rel="noopener">Check price →</a>
-      </div>
-      <div class="pick-box">
-        <div class="info">
-          <strong>Li-Ning Windstorm 72</strong>
-          <span>~$55 · very light (78g/5U), great for players who prioritize fast reactions over power</span>
-        </div>
-        <a href="#" class="buy" onclick="return confirm('Placeholder — replace with your approved affiliate link once accepted into Involve Asia (Shopee/Tokopedia).')">Check price →</a>
-      </div>
-      <h3>When to actually upgrade</h3>
-      <p>Once you can consistently clear to the back line and your footwork gets you into position before the shot (not after), that's the signal your technique has outgrown a flexible frame — not before.</p>
-    `
+    "id": "net-lift-trajectory",
+    "tag": "TRAINING",
+    "title": "Your Lift Reaches the Back. Did It Solve the Problem?",
+    "excerpt": "Choose an attacking or defensive lift from your contact height, balance and opponent’s position.",
+    "readTime": "3 min read",
+    "updated": "November 2026",
+    "body": "<p>A lift can land near the back line and still be the wrong shot. A flat lift can pass an opponent who is committed forwards. Play the same trajectory from a late, low contact and it may travel straight through their hitting zone.</p>\n<h3>Let the contact decide your first option</h3><p>When you reach the shuttle just below tape height with balance, you may have enough control to play an attacking lift. From a stretched, lower contact, a higher defensive lift gives you time to recover. The <a href=\"https://sfbadminton.tenniscity.org/wp-content/uploads/sites/29/2020/03/bwf_coach_education_coaches_manual_l1-2nd-edition-midres.pdf#page=103\">BWF Coaches’ Manual</a> distinguishes between these two purposes.</p>\n<h3>Read the racket you must pass</h3><p>If the opponent is close to the net and committed forwards, test a quick lift that clears their racket. If they are already balanced farther back, the same lift may give them a comfortable overhead contact. Consider whether a net reply would serve you better.</p>\n<h3>Try this: score the decision</h3><p>Ask a partner to feed ten shuttles to one front corner, varying the contact height. A second player starts around midcourt and chooses to move forwards or wait farther back before each lift. Score a point when your trajectory clears their available racket, reaches the intended rear area and lets you recover without rushing.</p><p>Repeat on the other side. If you film, look at where the shuttle passes the opponent as well as where it lands.</p>\n<p>See the front-court lift at 13:18 in <a href=\"https://www.youtube.com/watch?v=muINS3q7Ohk&amp;t=798s\">Shuttle Life’s tutorial</a>.</p><p>For technical coaching and structured badminton training, visit <a href=\"https://shuttle-life.com\">Shuttle Life</a>.</p>"
   },
   {
-    id: 'badminton-bags',
-    tag: 'GEAR',
-    title: 'Badminton Bags: What They Actually Need to Do',
-    excerpt: 'Racket count, ventilation, and string compartment — what to check before buying, at any price point.',
-    readTime: '4 min read',
-    updated: 'September 2026',
-    body: `
-      <p>A badminton bag seems like a simple purchase until your rackets are covered in shoe dust and your grip tape smells like a locker room. A few features separate a good bag from a bag-shaped sack.</p>
-      <h3>Racket compartment count</h3>
-      <p>Most club players only need a 2-3 racket bag. Don't pay for a 6-racket bag "to be safe" unless you're actually stringing for a team — the extra size just becomes dead weight you carry for nothing.</p>
-      <h3>Ventilated shoe compartment</h3>
-      <p>This is the single most-skipped feature on budget bags. A separate, ventilated shoe pocket keeps sweat and odor away from your rackets and clothes — non-negotiable if you're commuting straight from work to the court.</p>
-      <h3>A dedicated string/accessory pocket</h3>
-      <p>Spare grip tape, extra strings, and a small first-aid item (blister plasters are common) need their own space so they don't tangle with your gear.</p>
-      <div class="pick-box">
-        <div class="info">
-          <strong>Alpsport PVC Badminton Racket Bag</strong>
-          <span>~$24-40 · 2-racket capacity, thickened nylon interior, PVC laminated exterior — the bag we actually use</span>
-        </div>
-        <a href="https://s.click.aliexpress.com/e/_c4otJ6fT" class="buy" target="_blank" rel="noopener">Check price →</a>
-      </div>
-      <div class="pick-box">
-        <div class="info">
-          <strong>Hundred Cosmogear Kit Bag</strong>
-          <span>~$45 · true-budget pick, good if the bag is mostly stored indoors rather than hot car trunks</span>
-        </div>
-        <a href="#" class="buy" onclick="return confirm('Placeholder — replace with your approved affiliate link once accepted into Involve Asia (Shopee/Tokopedia).')">Check price →</a>
-      </div>
-      <div class="pick-box">
-        <div class="info">
-          <strong>Yonex Ace 1</strong>
-          <span>~$75 · thermal-lined racket compartment, matters if the bag sits in tropical heat</span>
-        </div>
-        <a href="#" class="buy" onclick="return confirm('Placeholder — replace with your approved affiliate link once accepted into Involve Asia (Shopee/Tokopedia).')">Check price →</a>
-      </div>
-    `
+    "id": "racket-care-bag-check",
+    "tag": "GEAR",
+    "title": "Your Racket Bag Is Where Problems Become Invisible",
+    "excerpt": "Check your strings, frame and grip before packing your badminton racket. This 30-second routine can reveal problems before your next session.",
+    "readTime": "3 min read",
+    "updated": "November 2026",
+    "body": "<p>Most players inspect their racket when something already feels wrong.</p>\n<p>A better time is immediately after training—before the racket disappears into the bag.</p>\n<p>You still remember any clashes, unusual contacts or movement in the handle. Thirty seconds now gives you better information than trying to diagnose the problem halfway through your next session.</p>\n<h3>Read the string bed under light</h3>\n<p>Turn the racket so the light passes across the strings.</p>\n<p>Look for concentrated fraying, damaged grommets or a string that no longer follows the normal pattern. Run your eyes around the frame for marks from clashes and floor contact.</p>\n<p>Li-Ning’s official maintenance guidance advises regular string inspection and timely replacement when serious fraying or cracks appear. It also warns against hard collisions and storing a racket under compression. These instructions concern Li-Ning rackets, but the inspection routine itself is useful regardless of brand. <a href=\"https://www.lining.com/product-usage-instructions\">Read Li-Ning’s product instructions</a>.</p>\n<p>The aim is not to panic over every cosmetic mark. You are establishing whether anything changed during that session.</p>\n<h3>Check what moved</h3>\n<p>Hold the racket normally and notice whether the grip surface has shifted, become unusually smooth or started separating near the cone.</p>\n<p>Then check whether the handle, shaft and frame show any movement or damage that was not present before training.</p>\n<p>Avoid making several equipment changes at once. If the grip moved, fix the grip. If the string bed changed, let a qualified stringer assess it. This preserves the information your equipment is giving you.</p>\n<h3>A racket compartment does not make a hot car safe</h3>\n<p>A dedicated compartment protects the racket from loose shoes and bottles pressing against it. It does not make prolonged car storage suitable.</p>\n<p>Yonex’s published racket precautions warn against humid locations, hot car trunks and storage that places a load on the racket. <a href=\"https://www.yonex.co.jp/assets/pdf/catalog/badminton/2024_badminton_catalog.pdf\">See the safety guidance in Yonex’s official badminton catalogue</a>.</p>\n<p>Pack the racket where it will not be compressed, then take the bag out of the car when the journey ends.</p>\n<p>If you want a separate case for transport, check the seller’s internal dimensions against your racket before ordering.</p><p><em>Affiliate disclosure: We may earn a commission on qualifying purchases at no extra cost to you.</em></p><p><a class=\"buy affiliate-button\" href=\"https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4E9hBlOn1IlKMO8Zu9aHFwgejmgLR7vQrcdDprBrNrpSavL625NP1q3BJIF0ftTSEC5NfbsFcvj6YhLpdo5eDkSU7ITxDTt72H52JYkX4NioRL35os9Xr1jQTva4tBhRAqgOGA9uhbJdjxQ3WRDghelB73PnmqF4Sq1f1apjVZnC7UGMpLq11ndETPsWS2LBFOlmYmzOPTk91uJ1OlGe86SnnNsQ934E7U14xeECvJe5msk8q6bLPJQKVI9rg67JOaK6qg0HzdDIA82Qtf4mGq6iWDIgmBf0HULKLpTfzEPOnpoK3ux44S5bNi02b42QzneqdIWlq8eyzaFUXvAeFUH7QDdyRpguyOyMHvCFB3yjPGszm3mz0uuNuIuFejfb41zQwSB8c0K5dTJ0YdOOcOwEwZBimNTNRZQZJPe0ZFu3arEW5ucAjJsqRxUvcn4ncn3zqZmjAbDBoJZRv3KJTTvaKo989nzVVG29oliUsxOzyV9Ymo8njj8p3IdOZInj8cvAPV3ebnPELr7ONqLvZlEp2aVzkTyGcULy26kYILNfrCZ23TS7jmwEfbPJCtcVXP6f4Tk6YUXCqvYGgAPMpVb0UL22RjfTyJ8lFHZppE8tPzBALPbm5yOBwqU3fq56JwVOG0qJD3Ta8kdAnEvSx2SAQp6vh4MoxFUepaTsPMSdDdACEqscmQUS6NM8cz7TJDP3SPVJa3MfNQ\" target=\"_blank\" rel=\"sponsored noopener\">View the hard racket case on AliExpress →</a></p><h3>Try the 30-second reset</h3>\n<p>After your next four sessions:</p>\n<ol><li>Inspect the central strings and grommets under light.</li><li>Check the frame where clashes usually occur.</li><li>Feel whether the grip has shifted or worn smooth.</li><li>Remove damp clothing from the racket compartment.</li><li>Pack the racket without shoes, bottles or other weight pressing against it.</li></ol>\n<p>Keep a short note of anything that changes.</p>\n<p>You are not trying to predict every string break or racket failure. You are creating a consistent point of comparison.</p>\n<p><strong>The best equipment check happens while you can still remember what happened on court.</strong></p>\n<p>For broader safety and technique inspiration, Shuttle Life’s <a href=\"https://www.youtube.com/watch?v=muINS3q7Ohk&amp;t=1201s\"><em>Basic Badminton for Beginners</em></a> includes a section labelled “Stroke Safety Training” at 20:01 in its indexed description. The storage routine above is a separate recommendation rather than a transcription of the video.</p>\n<p>For technical coaching and structured badminton training, visit <a href=\"https://shuttle-life.com\">Shuttle Life</a>.</p>"
   },
   {
-    id: 'nutrition-recovery',
-    tag: 'TRAINING',
-    title: 'Nutrition and Recovery After Badminton Training',
-    excerpt: 'What your body actually needs after intense court sessions — practical, low-cost meal ideas, no supplements required.',
-    readTime: '6 min read',
-    updated: 'September 2026',
-    body: `
-      <p>Badminton is one of the most physically demanding racket sports — constant direction changes, explosive jumps, and matches that can run well over an hour. Recovery isn't optional if you're playing more than once a week.</p>
-      <h3>The 30-minute window</h3>
-      <p>Within about 30 minutes of finishing, your muscles are primed to absorb protein and carbohydrates efficiently. This doesn't require a shake — a banana with a handful of nuts, or rice with eggs, does the same job without any powder.</p>
-      <h3>Hydration is not just water</h3>
-      <p>Badminton sessions in warm, humid indoor halls (common across South and Southeast Asia) mean you're losing more than just water — sodium and potassium go with the sweat. A pinch of salt and a squeeze of lime in water works as well as a branded electrolyte drink for a normal club session.</p>
-      <h3>Simple, affordable recovery meals</h3>
-      <ul>
-        <li>Rice, dal, and a boiled egg — a complete, cheap post-training meal common across the region</li>
-        <li>Banana + peanut butter on toast</li>
-        <li>Greek yogurt or curd with fruit, if dairy sits well with you</li>
-      </ul>
-      <h3>What to skip</h3>
-      <p>You don't need a recovery supplement stack for club-level play twice a week. Save that money — or put it toward better shoes.</p>
-    `
+    "id": "low-serve-tactics",
+    "tag": "TRAINING",
+    "title": "Your Low Serve Is In—But Is It Working?",
+    "excerpt": "Move the receiver’s contact point, disguise your placement and prepare for the reply you invite.",
+    "readTime": "3 min read",
+    "updated": "October 2026",
+    "body": "<p>A low serve can clear the tape perfectly and still give the receiver exactly what they want.</p>\n<p>Look beyond where it lands. <strong>Where does the receiver contact the shuttle—and which return have you made easy?</strong></p>\n<h3>Move their contact point</h3>\n<p>Before serving, look at the receiver’s racket position. Are they covering the T? Reaching forward? Preparing to take everything on their forehand?</p>\n<p>Use that information.</p>\n<p>A small change towards their body or away from their preferred contact point can make them adjust their racket rather than play the return they were waiting for.</p>\n<p>You don’t always need a completely different serve. Sometimes you need the same low serve aimed a little differently.</p>\n<p>Wide placement gives you another option, but it also opens different return angles. Choose it with a plan for the next shot.</p>\n<h3>Change the destination, keep the preparation</h3>\n<p>If your setup changes every time you aim somewhere different, you give the receiver an early clue.</p>\n<p>Practise different placements from a similar preparation. Ask your partner whether they could read the direction before contact.</p>\n<p>Do the same with your flick serve. Check whether you reveal it through a bigger backswing, a different shuttle position or a change in grip pressure.</p>\n<p>The receiver should have to respond to the serve—not recognise it before you hit.</p>\n<h3>Prepare for the reply you invite</h3>\n<p>Choose your serve and your next responsibility together.</p>\n<p>After contact, recover your racket and read the receiver. Avoid automatically rushing forward: a push past you needs a different response from a tight net return.</p>\n<p>Agree on the likely replies with your partner. A serve becomes more useful when both players understand what they are trying to cover afterwards.</p>\n<h3>Check your grip before changing your swing</h3>\n<p>If the handle slips during the service action, check your grip before rebuilding your technique. Keep the handle thickness comfortable and replace a worn overgrip when needed.</p>\n<p>If you are shopping for a replacement, these two generic overgrip listings are available to explore. We have not tested them or established that they match Yonex Super Grap in quality. Check the selected variant, dimensions and pack quantity before ordering.</p>\n<p><em>Affiliate disclosure: The following are affiliate links. We may earn a commission on qualifying purchases, at no extra cost to you.</em></p>\n<p><a class=\"buy affiliate-button\" href=\"https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4mKMwAlf67w0AKem6C2TwF7k8MVoeegK69nGOjyrI01dA4dkpdjnFFvqLyGVCyzyMER5BNRjQWXbJ7E8jqsgzaW8NweKt2reoRVmhI467bgH6iu6Ae6Nhhnd3aqY7p7bYRa0UAh6h2miDVBGNwOszZgwaWJ3GOEWxfIXFdv5V1vwgvbt2NwRtFH5JVUyp3M33RziLtUOMK6XTBkEp7ZRHcGAuZ9d91ACqfqYCsOFoldBVXhzglQA5YukA0Lx8YMNK1sQymYeWh1CivUhUM8mlPkl86rIlBWxOwnr5K63ZHAOXAWypQku6r0gUu2nsQW5UFudxcJYc2rsyt4ML61Yo9NtDBi1m77YddhPmDKZVzoUDqpKz7os3BHPBFoW2jPIN0gBsqSn6eL3Q4CaMtqxOM2eQGsHQ2Mf200JxK9YSLHrRex4A775TS1ZdjL0Xz2tKlDHKYydAE2N4pQwSEDwMcbtbTxGgypQV2jH7sLLtzB9Eccr54vrQfpwBLkBUoxcIsUx9JrA1uDGtp1apxfyBKxNuDba6Rg8I1GY5w5OibIJ6XCFaRPrWZnqvDerFsbOPBWPfeRmA6bye2xur97byqbd7H6X2a6Vskpg7B1k7bQk1sOVLx43TGbLsJmURbMZCVyTYY7QJDmgq3KcBuIYx2yD3dBieQFGnJ6cpssNLxsUOgW1R2jCqPF1X0fk3FQdwABhK2m85Oef1x\" target=\"_blank\" rel=\"sponsored noopener\">View gradient overgrip — option 1 →</a></p>\n<p><a class=\"buy affiliate-button\" href=\"https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4FeNVBz22YFt74MJDpfce5hWgfJSAOLX38m5cAfDfBSgYcj55Xt2sYf5UNILO76ZWDPT1lMqJs8K6NAZXg9Wsn8kBxqZHWReNVSN3AvbDrJJL3gPaQFvC9Jy8McVvNQ7F304effoWHQkdWBmlVRHjImo3ExK6s7p7ROBxYKFivp2GIi3cBseTb3eO39UWJf5LhQzfiS4tOz5d2hRcwXJYmJzn2Jl4CVYvrsNWTbhJNeUoysnp792cviu6z6fKorxyvpT3FqSaYw8SUuPAgka4bJpOPbQBfVxeaj8MzVND7SPHFiJeufksiJuC8ythm1DF6OA9J0tMVTVYpfBktAZK6USo9PJAJXOwcnKFBSBUfx1oXUMStf1Va42g2NXere7dp3b3TepC6s8n8Ha9UNxWhizmxzwjR51YdS3c9IYdbQ7L65KWedwjUWCKGLYo77ZCJOgOJJlRo1b2BwDdJewYM2Zor58sG0Zn6eljgzsDQ8lQQZfS2wBKR0AKXjxX1zOSrGvGsbetGNU2jFxEvE44eWYDT9SXBNMKAdTbriD4g3t4T9wdUslPFJioxp1DUTvgTGFUywO7LMBKxh0Avjy6JTrxAWKq1ssmhdvbjWHvBoCP13dJZg6mumNglWhK1XoFR5eoPRjqshWBrYG3uWLbmNCdWuvzrABqH0R1dWr0sR0ZBbtYTsiz1cm7dmzoq8vItizr5X4pDVylX\" target=\"_blank\" rel=\"sponsored noopener\">View gradient overgrip — option 2 →</a></p>\n<h3>Try this: score the return</h3>\n<p>Play three sets of ten service situations against an active receiver. Use a different low-serve placement in each set and continue through the third shot.</p>\n<p>Record:</p>\n<ul><li>Where the receiver contacted the shuttle.</li><li>Whether they played downwards, flat or upwards.</li><li>Whether your pair controlled the third shot.</li></ul>\n<p><strong>Which placement made this receiver least comfortable?</strong></p>\n<p>That answer tells you more than ten serves landing neatly beside the T.</p>\n<p>For technique feedback and structured badminton training, visit <a href=\"https://shuttle-life.com\" target=\"_blank\" rel=\"noopener\">shuttle-life.com</a>.</p>"
+  },
+  {
+    "id": "racket-guide",
+    "tag": "GEAR",
+    "title": "How to choose a badminton racket without getting oversold",
+    "excerpt": "Balance point, flex, and weight — what actually changes your game versus what's marketing.",
+    "readTime": "8 min read",
+    "updated": "September 2026",
+    "body": "\n      <p>Most racket buying advice online is written by whoever sells the racket. Here's the short version, stripped of marketing language, aimed at club and league players rather than professionals sponsored to say a frame is \"explosive.\"</p>\n      <h3>The three numbers that actually matter</h3>\n      <p><strong>Weight (grams):</strong> Most adult rackets sit between 80–90g unstrung, marked 3U to 4U. Lighter rackets (4U) are easier on the shoulder and quicker for doubles at the net. Heavier (3U) rackets hold up better in a hitting duel but tire you out faster if your conditioning isn't there yet.</p>\n      <p><strong>Balance point:</strong> This tells you where the weight sits, not just how much there is. Head-heavy rackets hit harder but are slower to reset; head-light and even-balance rackets are faster for defense and fast exchanges. Most improving club players are better served by even-balance than the head-heavy racket their doubles partner swears by.</p>\n      <p><strong>Shaft flex:</strong> Flexible shafts help you generate power with a shorter, faster swing — useful if your technique is still developing. Stiff shafts reward players who already generate their own power and want more control and less energy loss.</p>\n      <h3>A sensible starting pick</h3>\n      <div class=\"pick-box\">\n        <div class=\"info\">\n          <strong>Even-balance, 4U, medium flex frame</strong>\n          <span>Good default for club players rebuilding technique or coming back after a break</span>\n        </div>\n        <a class=\"buy affiliate-button\" href=\"https://s.click.aliexpress.com/e/_c3UnvUKh\" target=\"_blank\" rel=\"sponsored noopener\">Check price →</a>\n      </div>\n      <h3>What to ignore</h3>\n      <ul>\n        <li>Pro player endorsements — their swing speed and training load aren't yours.</li>\n        <li>\"Explosive power\" framing — that's shaft flex and your technique, not a marketing word.</li>\n        <li>Buying two grades stiffer than you need \"to grow into\" — you'll grow into worse habits compensating for it instead.</li>\n      </ul>\n      <h3>Next step</h3>\n      <p>Once the racket fits, string tension is the next lever — and the one most players get backwards. That's the next guide in this series.</p>\n    "
+  },
+  {
+    "id": "grip-tape",
+    "tag": "GEAR",
+    "title": "Grip Tape: When and How to Change It",
+    "excerpt": "The small, overlooked detail that affects your shot control more than most equipment upgrades.",
+    "readTime": "5 min read",
+    "updated": "September 2026",
+    "body": "\n      <p>Grip tape is the cheapest, most frequently ignored piece of badminton equipment — and one of the few things that directly affects every single shot you hit.</p>\n      <h3>Signs it's time to change</h3>\n      <p>A shiny, smooth patch where your thumb and fingers sit means the tape has lost its texture — this is the most reliable sign, more than how old it looks. If your grip feels slick even with dry hands, or you're wrapping a fresh overgrip around a base that's already worn out, it's time.</p>\n      <h3>Overgrip vs. replacement grip — what's the difference</h3>\n      <p>A <strong>replacement grip</strong> is the base layer directly on the handle — thicker, more cushioned, meant to last months. An <strong>overgrip</strong> is a thin layer wrapped on top — cheap, tacky, and meant to be swapped every few weeks for players who sweat heavily.</p>\n      <p>Most club players only need to replace the base grip once or twice a year, but should be swapping an overgrip every 3-6 weeks of regular play.</p>\n      <div class=\"pick-box video-box\">\n        <div class=\"info\">\n          <strong>Watch: How to put on a badminton grip</strong>\n          <span>Step-by-step guide — removing the old grip, prepping the racket, wrapping a new one</span>\n        </div>\n        <a href=\"https://www.youtube.com/watch?v=680urXHmmcA\" class=\"buy\" target=\"_blank\" rel=\"noopener\">Watch video →</a>\n      </div>\n      <div class=\"pick-box\">\n        <div class=\"info\">\n          <strong>Alpsport Pro Grip overgrip</strong>\n          <span>Ultra-absorbent, non-slip — the one we use</span>\n        </div>\n        <a class=\"buy affiliate-button\" href=\"https://s.click.aliexpress.com/e/_c3VMrc6p\" target=\"_blank\" rel=\"sponsored noopener\">Check price →</a>\n      </div>\n      <div class=\"pick-box\">\n        <div class=\"info\">\n          <strong>Alpsport Gradient overgrip (3-pack)</strong>\n          <span>Budget multi-pack, good for players who sweat heavily and go through grips fast</span>\n        </div>\n        <a class=\"buy affiliate-button\" href=\"https://s.click.aliexpress.com/e/_c35WQqDP\" target=\"_blank\" rel=\"sponsored noopener\">Check price →</a>\n      </div>\n      <h3>How to tell your grip size is actually wrong</h3>\n      <p>If you're re-wrapping constantly because the grip feels too thin no matter what, you may need a larger base grip size, not just fresh tape.</p>\n    "
+  },
+  {
+    "id": "home-exercises",
+    "tag": "TRAINING",
+    "title": "5 Exercises You Can Do at Home Without a Racket",
+    "excerpt": "Build conditioning and explosiveness between court sessions — no equipment, no court access needed.",
+    "readTime": "5 min read",
+    "updated": "September 2026",
+    "body": "\n      <p>Court time is limited for most club players, but conditioning between sessions is where real improvement happens. These five need no equipment and roughly 15 minutes.</p>\n      <h3>1. Shadow footwork (3 sets of 1 minute)</h3>\n      <p>Mimic the six corners of the court — front, back, and side lunges — without a shuttle. Focus on split-step timing, not speed.</p>\n      <h3>2. Lateral bounds</h3>\n      <p>Jump side to side, landing softly on one leg each time. Builds the explosive lateral push badminton constantly demands.</p>\n      <h3>3. Split-step reaction drill</h3>\n      <p>Have someone call \"left,\" \"right,\" \"front,\" or \"back\" randomly while you split-step and react. No partner? Use a phone timer with random intervals as your cue.</p>\n      <h3>4. Wall shadow swings</h3>\n      <p>Practice your smash and clear swing motion facing a wall, focusing on full shoulder rotation rather than arm-only movement — a common beginner habit that limits power.</p>\n      <h3>5. Single-leg balance holds</h3>\n      <p>30 seconds per leg, eyes closed if you can manage it. Badminton constantly puts you on one leg mid-lunge; ankle stability here directly reduces injury risk.</p>\n      <div class=\"pick-box video-box\">\n        <div class=\"info\">\n          <strong>Watch: home training routine</strong>\n          <span>Follow-along footwork and conditioning you can do without a court</span>\n        </div>\n        <a href=\"https://www.youtube.com/watch?v=tkwT4a2uDoc\" class=\"buy\" target=\"_blank\" rel=\"noopener\">Watch video →</a>\n      </div>\n      <h3>How to use this</h3>\n      <p>Two or three sessions a week, 15 minutes each, is enough to notice a difference in your court movement within a month — without needing any court access at all.</p>\n    "
+  },
+  {
+    "id": "shoes-under-50",
+    "tag": "GEAR",
+    "title": "Best Badminton Shoes Under $50",
+    "excerpt": "Grip, ankle support, and durability on indoor courts — three solid picks without paying for a pro endorsement.",
+    "readTime": "6 min read",
+    "updated": "September 2026",
+    "body": "\n      <p>Running shoes will hurt you on a badminton court. That's not an exaggeration — the lateral lunges and sudden stops badminton demands need a completely different sole and ankle structure, and this is the single most common mistake new players make with their budget.</p>\n      <h3>What actually matters at this price point</h3>\n      <p><strong>Gum rubber soles</strong>, not standard rubber — gum rubber grips indoor court surfaces without squeaking-and-sliding. Cheaper shoes skip this and swap in harder rubber that looks similar but slides under lateral pressure.</p>\n      <p><strong>A wider toe box</strong> than running shoes. Badminton footwork pushes your foot forward on lunges; a narrow toe box means bruised toenails within a few sessions.</p>\n      <p><strong>Some ankle structure</strong>, even if it's not a full ankle-support shoe. You don't need the $150 model, but a shoe with zero lateral structure will let your ankle roll on a hard cut.</p>\n      <h3>What to skip at this price</h3>\n      <p>Don't chase \"power cushioning\" marketing terms — at the budget tier, that's usually just standard EVA foam with a new name. And don't buy running shoes because they're cheaper; you'll spend the savings on a rolled ankle recovery.</p>\n      <div class=\"pick-box\">\n        <div class=\"info\">\n          <strong>Yonex Power Cushion 47</strong>\n          <span>~$45-50 · big-brand name at true budget tier, non-marking gum sole</span>\n        </div>\n        <a href=\"#\" class=\"buy\" onclick=\"return confirm('Placeholder — replace with your approved affiliate link once accepted into Involve Asia (Shopee/Tokopedia).')\">Check price →</a>\n      </div>\n      <div class=\"pick-box\">\n        <div class=\"info\">\n          <strong>Victor AS-30 H</strong>\n          <span>~$45-50 · well-reviewed entry shoe, strong lateral stability for the price</span>\n        </div>\n        <a href=\"#\" class=\"buy\" onclick=\"return confirm('Placeholder — replace with your approved affiliate link once accepted into Involve Asia (Shopee/Tokopedia).')\">Check price →</a>\n      </div>\n      <div class=\"pick-box\">\n        <div class=\"info\">\n          <strong>Li-Ning Ranger Lite</strong>\n          <span>~$50-55 · excellent value just above the $50 line, strong indoor-court grip</span>\n        </div>\n        <a href=\"#\" class=\"buy\" onclick=\"return confirm('Placeholder — replace with your approved affiliate link once accepted into Involve Asia (Shopee/Tokopedia).')\">Check price →</a>\n      </div>\n      <p><strong>Bottom line:</strong> at under $50, prioritize sole compound over cushioning marketing. A $40 shoe with proper gum rubber will outperform a $60 shoe with a flashy name and standard rubber.</p>\n    "
+  },
+  {
+    "id": "beginner-rackets",
+    "tag": "GEAR",
+    "title": "Badminton Rackets for Beginners: Don't Overbuy",
+    "excerpt": "Why a pro-level frame will slow your progress, not speed it up — and three honest entry-level picks.",
+    "readTime": "5 min read",
+    "updated": "September 2026",
+    "body": "\n      <p>Every beginner asks the same question: \"should I just buy a good racket so I don't need to upgrade later?\" The honest answer is no — and here's why that instinct backfires.</p>\n      <h3>Why pro-level rackets hurt beginners</h3>\n      <p>Advanced rackets are stiff, because advanced players generate their own power and want control, not help. A beginner swinging a stiff-shafted racket gets almost no help generating power, which means compensating with bigger, less controlled swings — building exactly the wrong habits you'll need to unlearn later.</p>\n      <h3>What a beginner racket should actually have</h3>\n      <p>A flexible-to-medium shaft that helps generate power on a shorter swing. Slightly head-light or even balance, so the racket is forgiving on mistimed shots — beginners mistime a lot of shots, that's the whole point of being a beginner. And a comfortable grip size; an oversized grip strains the wrist before technique is even a factor.</p>\n      <div class=\"pick-box\">\n        <div class=\"info\">\n          <strong>Victor Brave JR 6000</strong>\n          <span>~$45 · most affordable tier, even balance, forgiving on off-center hits</span>\n        </div>\n        <a href=\"#\" class=\"buy\" onclick=\"return confirm('Placeholder — replace with your approved affiliate link once accepted into Involve Asia (Shopee/Tokopedia).')\">Check price →</a>\n      </div>\n      <div class=\"pick-box\">\n        <div class=\"info\">\n          <strong>Alpsport V5 5U, entry level</strong>\n          <span>~$55-70 · full carbon fiber, forgiving flex, sold with gift box — the one we can link today</span>\n        </div>\n        <a class=\"buy affiliate-button\" href=\"https://s.click.aliexpress.com/e/_c3UnvUKh\" target=\"_blank\" rel=\"sponsored noopener\">Check price →</a>\n      </div>\n      <div class=\"pick-box\">\n        <div class=\"info\">\n          <strong>Li-Ning Windstorm 72</strong>\n          <span>~$55 · very light (78g/5U), great for players who prioritize fast reactions over power</span>\n        </div>\n        <a href=\"#\" class=\"buy\" onclick=\"return confirm('Placeholder — replace with your approved affiliate link once accepted into Involve Asia (Shopee/Tokopedia).')\">Check price →</a>\n      </div>\n      <h3>When to actually upgrade</h3>\n      <p>Once you can consistently clear to the back line and your footwork gets you into position before the shot (not after), that's the signal your technique has outgrown a flexible frame — not before.</p>\n    "
+  },
+  {
+    "id": "badminton-bags",
+    "tag": "GEAR",
+    "title": "Badminton Bags: What They Actually Need to Do",
+    "excerpt": "Racket count, ventilation, and string compartment — what to check before buying, at any price point.",
+    "readTime": "4 min read",
+    "updated": "September 2026",
+    "body": "\n      <p>A badminton bag seems like a simple purchase until your rackets are covered in shoe dust and your grip tape smells like a locker room. A few features separate a good bag from a bag-shaped sack.</p>\n      <h3>Racket compartment count</h3>\n      <p>Most club players only need a 2-3 racket bag. Don't pay for a 6-racket bag \"to be safe\" unless you're actually stringing for a team — the extra size just becomes dead weight you carry for nothing.</p>\n      <h3>Ventilated shoe compartment</h3>\n      <p>This is the single most-skipped feature on budget bags. A separate, ventilated shoe pocket keeps sweat and odor away from your rackets and clothes — non-negotiable if you're commuting straight from work to the court.</p>\n      <h3>A dedicated string/accessory pocket</h3>\n      <p>Spare grip tape, extra strings, and a small first-aid item (blister plasters are common) need their own space so they don't tangle with your gear.</p>\n      <div class=\"pick-box\">\n        <div class=\"info\">\n          <strong>Alpsport PVC Badminton Racket Bag</strong>\n          <span>~$24-40 · 2-racket capacity, thickened nylon interior, PVC laminated exterior — the bag we actually use</span>\n        </div>\n        <a class=\"buy affiliate-button\" href=\"https://s.click.aliexpress.com/e/_c4otJ6fT\" target=\"_blank\" rel=\"sponsored noopener\">Check price →</a>\n      </div>\n      <div class=\"pick-box\">\n        <div class=\"info\">\n          <strong>Hundred Cosmogear Kit Bag</strong>\n          <span>~$45 · true-budget pick, good if the bag is mostly stored indoors rather than hot car trunks</span>\n        </div>\n        <a href=\"#\" class=\"buy\" onclick=\"return confirm('Placeholder — replace with your approved affiliate link once accepted into Involve Asia (Shopee/Tokopedia).')\">Check price →</a>\n      </div>\n      <div class=\"pick-box\">\n        <div class=\"info\">\n          <strong>Yonex Ace 1</strong>\n          <span>~$75 · thermal-lined racket compartment, matters if the bag sits in tropical heat</span>\n        </div>\n        <a href=\"#\" class=\"buy\" onclick=\"return confirm('Placeholder — replace with your approved affiliate link once accepted into Involve Asia (Shopee/Tokopedia).')\">Check price →</a>\n      </div>\n    "
+  },
+  {
+    "id": "nutrition-recovery",
+    "tag": "TRAINING",
+    "title": "Nutrition and Recovery After Badminton Training",
+    "excerpt": "What your body actually needs after intense court sessions — practical, low-cost meal ideas, no supplements required.",
+    "readTime": "6 min read",
+    "updated": "September 2026",
+    "body": "\n      <p>Badminton is one of the most physically demanding racket sports — constant direction changes, explosive jumps, and matches that can run well over an hour. Recovery isn't optional if you're playing more than once a week.</p>\n      <h3>The 30-minute window</h3>\n      <p>Within about 30 minutes of finishing, your muscles are primed to absorb protein and carbohydrates efficiently. This doesn't require a shake — a banana with a handful of nuts, or rice with eggs, does the same job without any powder.</p>\n      <h3>Hydration is not just water</h3>\n      <p>Badminton sessions in warm, humid indoor halls (common across South and Southeast Asia) mean you're losing more than just water — sodium and potassium go with the sweat. A pinch of salt and a squeeze of lime in water works as well as a branded electrolyte drink for a normal club session.</p>\n      <h3>Simple, affordable recovery meals</h3>\n      <ul>\n        <li>Rice, dal, and a boiled egg — a complete, cheap post-training meal common across the region</li>\n        <li>Banana + peanut butter on toast</li>\n        <li>Greek yogurt or curd with fruit, if dairy sits well with you</li>\n      </ul>\n      <h3>What to skip</h3>\n      <p>You don't need a recovery supplement stack for club-level play twice a week. Save that money — or put it toward better shoes.</p>\n    "
   }
 ];
 
