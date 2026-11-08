@@ -572,6 +572,18 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #90a8
 @media(max-width:760px){.hero-inner{grid-template-columns:1fr;padding:36px 26px;gap:30px}.hero h1{max-width:16ch;letter-spacing:-1px}.hero-art{height:140px}.editor-strip{flex-wrap:wrap;gap:8px 20px}.logo-word{font-size:24px}nav{gap:14px}.section{padding:36px 0}.article{padding:24px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;scroll-behavior:auto!important}}
 
+
+/* Article links follow the readable text color, including in browser dark mode. */
+#post-body a[href]:not(.buy),
+#post-body a[href]:not(.buy):visited {
+  color: inherit;
+  font-weight: 650;
+  text-decoration: underline;
+  text-decoration-thickness: .1em;
+  text-underline-offset: .18em;
+}
+#post-body a[href]:not(.buy):hover { text-decoration-thickness: .16em; }
+#post-body a[href]:not(.buy):focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
 </style>
 </head>
 <body>
